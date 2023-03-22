@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Título -->
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/alto1"
+        android:layout_marginTop="@dimen/alto1"
+        android:layout_marginEnd="@dimen/alto1"
+        android:text="@string/strConvertidor"
+        android:textSize="@dimen/tamtexto2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Medida origen -->
+    <TextView
+        android:id="@+id/txtvMedidaO"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/alto2"
+        android:layout_marginTop="@dimen/margen2"
+        android:layout_marginEnd="@dimen/alto2"
+        android:text="@string/strOrigen"
+        android:textSize="@dimen/tamtexto"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
+
+    <RadioGroup
+        android:id="@+id/rgOrigen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/alto2"
+        android:layout_marginTop="@dimen/margen1"
+        android:layout_marginEnd="@dimen/alto2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtvMedidaO">
+
+        <RadioButton
+            android:id="@+id/rbKilometrosO"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/strKilometros"
+            android:textSize="@dimen/tamtexto" />
+
+        <RadioButton
+            android:id="@+id/rbMetrosO"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/strMetros"
+            android:textSize="@dimen/tamtexto" />
+
+        <RadioButton
+            android:id="@+id/rbCentimetrosO"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/strCentimetros"
+            android:textSize="@dimen/tamtexto" />
+
+    </RadioGroup>
+
+    <!-- Medida destino -->
+    <TextView
+        android:id="@+id/tvDestino"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/alto2"
+        android:layout_marginTop="@dimen/margen2"
+        android:layout_marginEnd="@dimen/alto2"
+        android:text="@string/strDestino"
+        android:textSize="@dimen/tamtexto"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgOrigen" />
+
+    <RadioGroup
+        android:id="@+id/rgDestino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/alto2"
+        android:layout_marginTop="@dimen/margen1"
+        android:layout_marginEnd="@dimen/alto2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDestino">
+
+        <RadioButton
+            android:id="@+id/rbKilometrosD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/strKilometros"
+            android:textSize="@dimen/tamtexto" />
+
+        <RadioButton
+            android:id="@+id/rbMetrosD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/strMetros"
+            android:textSize="@dimen/tamtexto" />
+
+        <RadioButton
+            android:id="@+id/rbCentimetrosD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/strCentimetros"
+            android:textSize="@dimen/tamtexto" />
+    </RadioGroup>
+
+    <!-- Valor a convertir -->
+    <TextView
+        android:id="@+id/tvConvertir"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/alto2"
+        android:layout_marginTop="@dimen/margen2"
+        android:layout_marginEnd="@dimen/alto2"
+        android:text="@string/strConvertir"
+        android:textSize="@dimen/tamtexto"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgDestino" />
+
+    <!-- Convertir -->
+    <Button
+        android:id="@+id/btnConvertir"
+        android:layout_width="214dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/alto2"
+        android:layout_marginTop="@dimen/margen1"
+        android:text="@string/strBtnConvertir"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editNum" />
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="299dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="@dimen/alto2"
+        android:layout_marginTop="@dimen/margen1"
+        android:layout_marginEnd="@dimen/alto2"
+        android:background="@drawable/rounded_border"
+        android:padding="4dp"
+        android:text="@string/strVacio"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/tamtexto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnConvertir" />
+
+    <EditText
+        android:id="@+id/editNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/alto2"
+        android:layout_marginTop="@dimen/margen1"
+        android:layout_marginEnd="@dimen/alto2"
+        android:ems="10"
+        android:hint="@string/strNum"
+        android:inputType="number"
+        android:textSize="@dimen/tamtexto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvConvertir" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

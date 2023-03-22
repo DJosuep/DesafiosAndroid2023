@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Convertidor</string>
+
+    <string name="strConvertidor">Convertidor de medidas</string>
+    <string name="strOrigen">Medida origen</string>
+    <string name="strDestino">Medida destino</string>
+    <string name="strKilometros">Kilómetros</string>
+    <string name="strMetros">Metros</string>
+    <string name="strCentimetros">Centímetros</string>
+    <string name="strConvertir">Valor a convertir:</string>
+    <string name="strBtnConvertir">Convertir</string>
+    <string name="strNum">Ingrese un número</string>
+    <string name="strVacio">El resultado se mostrará aquí</string>>
+</resources>
