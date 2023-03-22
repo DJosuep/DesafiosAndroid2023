@@ -3,6 +3,7 @@ package com.example.lab1
 import com.example.lab1.ejercicio1.planeta
 import com.example.lab1.ejercicio1.tipoPlaneta
 import com.example.lab1.ejercicio2.ej2
+import com.example.lab1.ejercicio3.ej3
 
 fun main(){
     println("Integrantes del grupo:   \nDavid Antonio Torres Carcache.   \nPável Josué García Rivas.\n")
@@ -17,4 +18,5 @@ fun main(){
     ej2()
 
     /* Ejercicio 3 */
+    ej3()
 }
