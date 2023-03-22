@@ -1,10 +1,10 @@
 package com.example.lab1.ejercicio1
 
-enum class tipoPlaneta{
+enum class TipoPlaneta{
     terrestre, gaseoso, enano
 }
 
-class planeta constructor(var nombre:String, var satelites:Int, var masa:Double, var volumen:Double, var distanciaSol:Int, var tipo:tipoPlaneta){
+class Planeta constructor(var nombre:String, var satelites:Int, var masa:Double, var volumen:Double, var distanciaSol:Int, var tipo:TipoPlaneta){
     val distanciaExt:Int = 149597870
 
     init {
