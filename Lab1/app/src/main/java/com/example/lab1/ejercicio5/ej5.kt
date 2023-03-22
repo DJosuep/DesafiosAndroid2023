@@ -1,7 +1,5 @@
 package com.example.lab1.ejercicio5
 
-import android.app.Person
-
 open class Persona(val nombre:String, val apellido:String) {
     var tipoPersona:String = ""
 
@@ -47,5 +45,5 @@ fun ej5(){
 
     println("\n---Clase Colaborador:")
     println(colaborador.showTipoPersona())
-    println(cliente.getNombreCompleto())
+    println(cliente.getNombreCompleto()+".")
 }
