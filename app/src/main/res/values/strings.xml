@@ -2,5 +2,5 @@
     <string name="app_name">ArteLista</string>
     <string name="hint_UserName">Nombre de usuario</string>
     <string name="hint_Password">Contraseña</string>
-    <string name="strLogin">Login</string>
+    <string name="strLogin">Iniciar sesión</string>
 </resources>
