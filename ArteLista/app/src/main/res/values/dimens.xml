@@ -9,4 +9,5 @@
     <dimen name="margen7">100dp</dimen>
     <dimen name="tamtexto1">12sp</dimen>
     <dimen name="tamtexto2">16sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>
