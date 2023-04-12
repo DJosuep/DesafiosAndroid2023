@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,10 +16,18 @@ class LoginActivity : AppCompatActivity() {
 
         //Crando una referencia a los elementos
         val btnLogin = findViewById<Button>(R.id.btnLogin)
+        val tvCreate = findViewById<TextView>(R.id.tvCreaUnaAqui)
 
+        //funcionalidad al boton Login
         btnLogin.setOnClickListener {
             startActivity(intent)
             finish()
         }
+
+        //funcionalidad al textview crea aqui
+        tvCreate.setOnClickListener{
+            
+        }
+
     }
 }
