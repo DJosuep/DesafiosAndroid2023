@@ -7,7 +7,7 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
 
-class activity_splash : AppCompatActivity() {
+class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         try
         {
@@ -20,7 +20,7 @@ class activity_splash : AppCompatActivity() {
             LogoApp.startAnimation(AnimLogo)
 
             //Intent para crear instancia de la activity Login
-            val intent = Intent(this, activity_login::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             AnimLogo.setAnimationListener(object:
                 Animation.AnimationListener {
                 override fun onAnimationStart(animation: Animation?) {

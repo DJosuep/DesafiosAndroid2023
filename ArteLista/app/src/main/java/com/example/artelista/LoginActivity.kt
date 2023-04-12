@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 
-class activity_login : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -13,7 +13,7 @@ class activity_login : AppCompatActivity() {
         //Intent para crear instancia de la Main_activity
         val intent = Intent(this, MainActivity::class.java)
 
-        //Crando una referencia al botton
+        //Crando una referencia a los elementos
         val btnLogin = findViewById<Button>(R.id.btnLogin)
 
         btnLogin.setOnClickListener {
