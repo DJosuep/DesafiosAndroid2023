@@ -10,15 +10,18 @@
     tools:context=".activity_login">
 
     <ImageView
-                android:id="@+id/imglogoLogin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/logo_artelista"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.1" />
+        android:id="@+id/imglogoLogin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/logo_lado"
+        android:layout_marginRight="@dimen/logo_lado"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="400dp"
+        android:background="@drawable/logo_artelista"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <TextView
                 android:id="@+id/tvEtiqLogo"
                 android:text="@string/strEtiqLogo"
@@ -78,6 +81,7 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editPassword"/>
+
     <TextView
         android:id="@+id/tvNotienecuenta"
         android:layout_width="wrap_content"
@@ -89,16 +93,17 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
     <TextView
         android:id="@+id/tvCreaUnaAqui"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margen2"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
         android:text="@string/strCreaUna"
         android:textColor="@color/rosa1"
         android:textStyle="bold"
-        app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintLeft_toRightOf="@id/tvNotienecuenta"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvNotienecuenta"
         app:layout_constraintTop_toBottomOf="@id/btnLogin" />
 </androidx.constraintlayout.widget.ConstraintLayout>

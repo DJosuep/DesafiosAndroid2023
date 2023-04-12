@@ -10,4 +10,8 @@
     <dimen name="tamtexto1">12sp</dimen>
     <dimen name="tamtexto2">16sp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="logo_lado">40dp</dimen>
+    <dimen name="logo_arriba">50dp</dimen>
+    <dimen name="logo_arriba1">200dp</dimen>
+    <dimen name="logo_abajo">350dp</dimen>
 </resources>
