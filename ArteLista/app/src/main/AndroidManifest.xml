@@ -12,7 +12,7 @@
         android:theme="@style/Theme.ArteLista"
         tools:targetApi="31">
         <activity
-            android:name=".activity_crearcuenta"
+            android:name=".ActivityCrearCuenta"
             android:theme="@style/Theme.ArteLista2"
             android:exported="false">
             <meta-data

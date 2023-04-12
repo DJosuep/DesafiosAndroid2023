@@ -28,7 +28,7 @@ class LoginActivity : AppCompatActivity() {
 
         //funcionalidad al textview crea aqui
         tvCrearCuenta.setOnClickListener({v ->
-            val intent = Intent(v.getContext(), activity_crearcuenta::class.java)
+            val intent = Intent(v.getContext(), ActivityCrearCuenta::class.java)
             startActivity(intent)
         })
     }
