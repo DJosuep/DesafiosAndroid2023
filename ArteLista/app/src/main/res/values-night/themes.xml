@@ -15,12 +15,12 @@
     </style>
     <style name="Theme.ArteLista1" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/rosa3</item>
-        <item name="colorPrimaryVariant">@color/rosa1</item>
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorPrimaryVariant">@color/primary_color</item>
         <item name="colorOnPrimary">@color/purple_700</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/purple_700</item>
-        <item name="colorSecondaryVariant">@color/rosa2</item>
+        <item name="colorSecondaryVariant">@color/secondary_color</item>
         <item name="colorOnSecondary">@color/white</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
@@ -28,12 +28,12 @@
     </style>
     <style name="Theme.ArteLista2" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/rosa3</item>
-        <item name="colorPrimaryVariant">@color/rosa1</item>
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorPrimaryVariant">@color/primary_color</item>
         <item name="colorOnPrimary">@color/purple_700</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/purple_700</item>
-        <item name="colorSecondaryVariant">@color/rosa2</item>
+        <item name="colorSecondaryVariant">@color/secondary_color</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>

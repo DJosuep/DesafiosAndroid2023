@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">ArteLista</string>
+    <string name="app_name">MercadoLibre</string>
     <string name="hint_UserName">Nombre Usuario</string>
     <string name="hint_Password">Contraseña</string>
     <string name="strLogin">Login</string>
     <string name="strNoTieneCuenta">No tiene cuenta?</string>
     <string name="strCreaUna">Cree una aquí</string>
-    <string name="strEtiqLogo">arteLista</string>
+    <string name="strEtiqLogo">MercadoLibre</string>
     <string name="title_activity_main2">MainActivity2</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
