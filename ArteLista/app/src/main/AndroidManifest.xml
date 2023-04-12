@@ -12,11 +12,11 @@
         android:theme="@style/Theme.ArteLista"
         tools:targetApi="31" >
         <activity
-            android:name=".activity_login"
+            android:name=".LoginActivity"
             android:theme="@style/Theme.ArteLista2"
             android:exported="false" />
         <activity
-            android:name=".activity_splash"
+            android:name=".SplashActivity"
             android:exported="true"
             android:theme="@style/Theme.ArteLista2" >
             <intent-filter>
