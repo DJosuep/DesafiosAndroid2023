@@ -5,7 +5,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context=".ActivityCrearCuenta">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tbCrearCuenta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="@string/crearCuenta"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editName"
