@@ -26,7 +26,7 @@ class LoginActivity : AppCompatActivity() {
 
         //funcionalidad al textview crea aqui
         tvCreate.setOnClickListener{
-            
+
         }
 
     }
