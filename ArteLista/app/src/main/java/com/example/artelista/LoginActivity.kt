@@ -6,25 +6,23 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import com.example.artelista.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
+    private lateinit var binding: ActivityLoginBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
-
-        //Crando una referencia a los elementos
-        val btnLogin = findViewById<Button>(R.id.btnLogin)
-        val tvCrearCuenta:TextView = findViewById(R.id.tvCreaUnaAqui)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         //funcionalidad al boton Login
-        btnLogin.setOnClickListener {v->
+        binding.btnLogin.setOnClickListener {v->
             val intent = Intent(v.context, MainActivity::class.java)
             startActivity(intent)
         }
 
         //funcionalidad al textview crea aqui
-        tvCrearCuenta.setOnClickListener { v ->
+        binding.tvCreaUnaAqui.setOnClickListener { v ->
             val intent = Intent(v.context, ActivityCrearCuenta::class.java)
             startActivity(intent)
         }
