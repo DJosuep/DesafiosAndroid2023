@@ -23,4 +23,8 @@
     <string name="hint_User_Password">Ingrese su contraseña</string>
     <string name="hint_User_Password2">Confirme su contraseña</string>
     <string name="crearCuenta">Crear cuenta</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Panel</string>
+    <string name="title_notifications">Notificaciones</string>
 </resources>
