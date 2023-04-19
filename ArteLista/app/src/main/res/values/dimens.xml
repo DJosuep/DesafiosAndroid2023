@@ -9,7 +9,11 @@
     <dimen name="margen7">100dp</dimen>
     <dimen name="tamtexto1">12sp</dimen>
     <dimen name="tamtexto2">16sp</dimen>
+    <dimen name="tamtexto3">20sp</dimen>
+    <dimen name="tamtexto4">24sp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="logo_ancho">300dp</dimen>
+    <dimen name="logo_alto">200dp</dimen>
     <dimen name="logo_lado">40dp</dimen>
     <dimen name="logo_arriba">50dp</dimen>
     <dimen name="logo_arriba1">200dp</dimen>

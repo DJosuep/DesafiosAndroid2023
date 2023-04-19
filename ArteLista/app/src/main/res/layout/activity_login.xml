@@ -17,7 +17,7 @@
         android:layout_marginTop="50dp"
         android:layout_marginRight="@dimen/logo_lado"
         android:layout_marginBottom="400dp"
-        android:background="@drawable/logo_artelista"
+        android:background="@drawable/logo_mercadolibre"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
