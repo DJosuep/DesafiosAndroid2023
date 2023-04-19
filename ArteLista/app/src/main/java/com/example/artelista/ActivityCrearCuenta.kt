@@ -1,6 +1,7 @@
 package com.example.artelista
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.artelista.databinding.ActivityCrearcuentaBinding
@@ -15,5 +16,11 @@ class ActivityCrearCuenta : AppCompatActivity() {
 
         setSupportActionBar(binding.tbCrearCuenta)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+
+        //funcionalidad al textview crea aqui
+        binding.btnSingin.setOnClickListener { v ->
+            val intent = Intent(v.context, MenuActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

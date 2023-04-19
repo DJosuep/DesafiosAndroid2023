@@ -9,10 +9,16 @@
     <dimen name="margen7">100dp</dimen>
     <dimen name="tamtexto1">12sp</dimen>
     <dimen name="tamtexto2">16sp</dimen>
+    <dimen name="tamtexto3">20sp</dimen>
+    <dimen name="tamtexto4">24sp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="logo_ancho">350dp</dimen>
+    <dimen name="logo_alto">250dp</dimen>
+    <dimen name="logo_ancho2">300dp</dimen>
+    <dimen name="logo_alto2">200dp</dimen>
     <dimen name="logo_lado">40dp</dimen>
     <dimen name="logo_arriba">50dp</dimen>
-    <dimen name="logo_arriba1">200dp</dimen>
+    <dimen name="logo_arriba1">150dp</dimen>
     <dimen name="logo_abajo">350dp</dimen>
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
