@@ -12,13 +12,11 @@
 
     <ImageView
         android:id="@+id/imgArteLista"
-        android:layout_width="match_parent"
-        android:layout_height="267dp"
-        android:layout_marginLeft="@dimen/logo_lado"
-        android:layout_marginTop="@dimen/logo_arriba"
-        android:layout_marginRight="@dimen/logo_lado"
-        android:layout_marginBottom="0dp"
-        android:background="@drawable/logo_mercadolibre" />
+        android:layout_width="@dimen/logo_ancho"
+        android:layout_height="@dimen/logo_alto"
+        android:foregroundGravity="center_horizontal"
+        android:background="@drawable/logo_mercadolibre"
+        android:contentDescription="@string/strEtiqLogo"/>
 
     <TextView
         android:layout_width="match_parent"

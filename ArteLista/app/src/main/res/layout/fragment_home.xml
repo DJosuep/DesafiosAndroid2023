@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="@dimen/logo_ancho"
-        android:layout_height="@dimen/logo_alto"
+        android:layout_width="@dimen/logo_ancho2"
+        android:layout_height="@dimen/logo_alto2"
         android:layout_marginTop="@dimen/logo_arriba1"
         android:background="@drawable/logo2_mercadolibre"
         android:foregroundGravity="center_horizontal"
@@ -27,7 +27,7 @@
         android:layout_marginEnd="8dp"
         android:text="@string/strInicioPresentacion1"
         android:textAlignment="center"
-        android:textColor="@color/gris"
+        android:textColor="@color/gris_oscuro"
         android:textSize="@dimen/tamtexto4"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -45,7 +45,7 @@
         android:layout_marginEnd="8dp"
         android:text="@string/strInicioPresentacion2"
         android:textAlignment="center"
-        android:textColor="@color/gris"
+        android:textColor="@color/gris_oscuro"
         android:textSize="@dimen/tamtexto3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
