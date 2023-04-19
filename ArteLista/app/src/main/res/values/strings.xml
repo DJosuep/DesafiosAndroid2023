@@ -30,8 +30,10 @@
     <string name="strCarrito">Carrito</string>
     <string name="strNotificaciones">Novedades</string>
 
+    <!-- Fragment inicio -->
+    <string name="strInicioPresentacion1">Envíos gratis en 24 horas.</string>
+    <string name="strInicioPresentacion2">Compra hoy y recibe mañana.</string>
+
     <!-- Generados automáticamente -->
     <string name="strActivityMenu">MenuActivity</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
