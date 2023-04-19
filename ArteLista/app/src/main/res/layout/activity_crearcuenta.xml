@@ -18,7 +18,7 @@
             android:id="@+id/tbCrearCuenta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:title="@string/crearCuenta"/>
+            app:title="@string/strCrearCuenta"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -34,7 +34,7 @@
         android:background="@drawable/rounded_corner2"
         android:drawableLeft="@drawable/ic_user"
         android:drawablePadding="@dimen/margen5"
-        android:hint="@string/hint_User_Name"
+        android:hint="@string/hintUsername"
         android:textColorHint="@color/black"
         android:inputType="textPassword"
         android:paddingLeft="@dimen/margen4"
@@ -53,7 +53,7 @@
         android:background="@drawable/rounded_corner2"
         android:drawableLeft="@drawable/ic_mail"
         android:drawablePadding="@dimen/margen5"
-        android:hint="@string/hint_User_Mail"
+        android:hint="@string/hintUserEmail"
         android:inputType="textPassword"
         android:paddingLeft="@dimen/margen4"
         android:layout_marginTop="@dimen/margen3"
@@ -73,7 +73,7 @@
         android:background="@drawable/rounded_corner2"
         android:drawableLeft="@drawable/ic_password"
         android:drawablePadding="@dimen/margen5"
-        android:hint="@string/hint_User_Password"
+        android:hint="@string/hintUserPass"
         android:inputType="textPassword"
         android:paddingLeft="@dimen/margen4"
         android:layout_marginTop="@dimen/margen3"
@@ -93,7 +93,7 @@
         android:background="@drawable/rounded_corner2"
         android:drawableLeft="@drawable/ic_password"
         android:drawablePadding="@dimen/margen5"
-        android:hint="@string/hint_User_Password2"
+        android:hint="@string/hintUserPassConfirm"
         android:inputType="textPassword"
         android:paddingLeft="@dimen/margen4"
         android:layout_marginTop="@dimen/margen3"
@@ -111,7 +111,7 @@
         android:layout_marginLeft="@dimen/margen3"
         android:layout_marginRight="@dimen/margen3"
         android:backgroundTint="@color/primary_color"
-        android:hint="@string/crearCuenta"
+        android:hint="@string/strCrearCuenta"
         android:textColor="@color/white"
         android:background="@drawable/rounded_corner"
         android:textSize="@dimen/tamtexto2"

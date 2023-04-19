@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.artelista.databinding.FragmentUserBinding
 
-class UserFragment : Fragment() {
+class UserrFragment : Fragment() {
 
     private var _binding: FragmentUserBinding? = null
 
@@ -28,7 +28,7 @@ class UserFragment : Fragment() {
         _binding = FragmentUserBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textDashboard
+        val textView: TextView = binding.textUser
         dashboardViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }

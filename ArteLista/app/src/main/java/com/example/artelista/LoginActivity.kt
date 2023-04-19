@@ -17,7 +17,7 @@ class LoginActivity : AppCompatActivity() {
 
         //funcionalidad al boton Login
         binding.btnLogin.setOnClickListener {v->
-            val intent = Intent(v.context, MainActivity::class.java)
+            val intent = Intent(v.context, MenuActivity::class.java)
             startActivity(intent)
         }
 
