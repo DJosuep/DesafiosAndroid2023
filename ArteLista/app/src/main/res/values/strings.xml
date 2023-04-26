@@ -36,4 +36,5 @@
 
     <!-- Generados automáticamente -->
     <string name="strActivityMenu">MenuActivity</string>
+    <string name="strCuenta">Cuenta</string>
 </resources>

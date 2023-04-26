@@ -27,5 +27,5 @@
         android:id="@+id/navigation_user"
         android:name="com.example.artelista.ui.notifications.NotificationsFragment"
         android:label="@string/strNotificaciones"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_user" />
 </navigation>

@@ -30,4 +30,5 @@
     <string name="strInicio">Home</string>
     <string name="strCarrito">Dashboard</string>
     <string name="strNotificaciones">Notifications</string>
+    <string name="strCuenta">Cuenta</string>
 </resources>
