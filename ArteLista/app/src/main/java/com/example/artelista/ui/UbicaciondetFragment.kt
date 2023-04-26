@@ -6,35 +6,32 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import androidx.navigation.Navigation
 import com.example.artelista.R
-import com.example.artelista.databinding.FragmentUbicacionBinding
+import com.example.artelista.databinding.FragmentUbicaiondetBinding
 
-class UbicacionFragment : Fragment() {
 
-    private var fbinding:FragmentUbicacionBinding? = null
+class UbicaciondetFragment : Fragment() {
+
+    private var fbinding: FragmentUbicaiondetBinding? = null
     private val binding get() = fbinding!!
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        fbinding = FragmentUbicacionBinding.inflate(inflater, container, false)
+        fbinding = FragmentUbicaiondetBinding.inflate(inflater, container, false)
         val view: View = binding.root
-        val imgMapa: ImageView = fbinding!!.imgMapa
 
-        imgMapa.setOnClickListener{
-            Navigation.findNavController(it).navigate(R.id.ubicaiondetFragment)
-        }
+        val toolbar: Toolbar = fbinding!!.tbUbicacionDet
 
-        val toolbar: Toolbar = fbinding!!.toolUbicacion
         toolbar.navigationIcon = ContextCompat.getDrawable(view.context, R.drawable.ic_back )
         toolbar.setTitle(R.string.strUbicacion)
         toolbar.setTitleTextColor(Color.WHITE)
         toolbar.setNavigationOnClickListener {
-            Navigation.findNavController(it).popBackStack(R.id.ubicacionFragment, true)
+            Navigation.findNavController(it).popBackStack(R.id.ubicaiondetFragment, true)
         }
 
         return view
@@ -42,7 +39,6 @@ class UbicacionFragment : Fragment() {
 
     override fun onDestroy() {
         super.onDestroy()
-        fbinding = null
-    }
 
+    }
 }

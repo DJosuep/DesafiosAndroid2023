@@ -53,10 +53,17 @@
     <string name="strCategoriaNotificacion">Subasta</string>
     <string name="strDescripcionArticulo">Este artículo está en venta. Este artículo está en venta. Este artículo está en venta. Este artículo está en venta.</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+    <!-- Pantalla Ubicacion -->
     <string name="hello_blank_fragment" tools:ignore="MissingTranslation">Hello blank fragment</string>
     <string name="strUbicacion">Ubicacion</string>
     <string name="strdefault_hora" translatable="false">00:00</string>
     <string name="strdefault_AM" translatable="false">A.M.</string>
     <string name="transition_galeriadet" translatable="false">No se</string>
+
+    <!-- Pantalla ubucation determinada -->
+    <string name="strUbicacionEvento">San juan</string>
+    <string name="strDireccionEvento">Del hotel los malandros</string>
+    <string name="strSitioWebEvento">www.uni.edu.ni</string>
+    <string name="strTelefonoEvento">0000-0000</string>
+    <string name="strTodo">TODO</string>
 </resources>
