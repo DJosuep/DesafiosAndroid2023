@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+     <ImageView
+         android:id="@+id/imgUsuario"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:src="@drawable/ic_vendedor"
+         android:layout_margin="@dimen/margen8"
+         app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintLeft_toLeftOf="parent"
+         app:layout_constraintBottom_toBottomOf="@id/tvNombreUsuario"
+         app:tint="@color/secondary_color" />
+
+    <TextView
+        android:id="@+id/tvNombreUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margen8"
+        android:text="@string/strNombreVendedor"
+        android:textColor="@color/gris_oscuro"
+        android:textSize="@dimen/tamtexto2"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/imgUsuario"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tvCategoriaUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strCategoriaVendedor"
+        app:layout_constraintLeft_toRightOf="@id/imgUsuario"
+        app:layout_constraintTop_toBottomOf="@id/tvNombreUsuario" />
+
+    <TextView
+        android:id="@+id/tvPaisUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margen8"
+        android:text="@string/strPaisVendedor"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/tvNombreUsuario" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tam1"
+        android:background="@color/gris"
+        android:layout_marginTop="@dimen/margen8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/tvCategoriaUsuario"
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

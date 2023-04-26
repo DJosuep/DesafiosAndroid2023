@@ -45,4 +45,5 @@
     <string name="strSitioWebEvento">www.uni.edu.ni</string>
     <string name="strTelefonoEvento">0000-0000</string>
     <string name="strTodo">TODO</string>
+    <string name="strCategoriaVendedor">Furniture sellerman</string>
 </resources>
