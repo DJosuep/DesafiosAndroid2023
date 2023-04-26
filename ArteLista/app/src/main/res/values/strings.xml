@@ -47,4 +47,6 @@
     <string name="strCuenta">Cuenta</string>
     <string name="strTituloEvento">Subasta de cuerno de mamut</string>
     <string name="strCategoriaNotificacion">Subasta</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
