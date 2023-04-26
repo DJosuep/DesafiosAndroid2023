@@ -31,7 +31,7 @@
     <string name="strInicioPresentacion2">Buy today and receibe tomorrow</string>
     <string name="strActivityMenu">MenuActivity</string>
     <string name="strInicio">Home</string>
-    <string name="strCarrito">Dashboard</string>
+    <string name="strCarrito">Shop cart</string>
     <string name="strNotificaciones">Notifications</string>
     <string name="strCuenta">Cuenta</string>
 </resources>
