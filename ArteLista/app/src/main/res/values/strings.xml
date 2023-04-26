@@ -66,4 +66,7 @@
     <string name="strSitioWebEvento">www.uni.edu.ni</string>
     <string name="strTelefonoEvento">0000-0000</string>
     <string name="strTodo">TODO</string>
+    <string name="strCategoriaVendedor">Vendedor de muebles</string>
+    <string name="strPaisVendedor" translatable="false">Nicaragua</string>
+    <string name="strUsuarios">Users</string>
 </resources>

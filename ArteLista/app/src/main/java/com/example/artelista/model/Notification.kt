@@ -6,5 +6,4 @@ class Notification(private var tituloNotification:String,
     fun getTituloNotification():String{return this.tituloNotification}
     fun getCategoriaNotification():String{return this.categoriaNotification}
     fun getHoraNotification():String{return this.horaNotification}
-
 }

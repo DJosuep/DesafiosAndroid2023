@@ -10,15 +10,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.artelista.R
 import com.example.artelista.model.Notification
 
-class AdapterNotifications(Notifications: ArrayList<Notification>,
-                           resource:Int, activity: Activity): RecyclerView.Adapter<AdapterNotifications.NotificationViewHolder>() {
+class AdapterNotifications(
+    notifications: ArrayList<Notification>,
+    resource:Int, activity: Activity): RecyclerView.Adapter<AdapterNotifications.NotificationViewHolder>() {
     //------------
     private val notifications: ArrayList<Notification>
     private val resource: Int
     private val activity: Activity
     //------------
     init {
-        this.notifications = Notifications
+        this.notifications = notifications
         this.resource = resource
         this.activity = activity
     }
@@ -53,7 +54,6 @@ class AdapterNotifications(Notifications: ArrayList<Notification>,
             tvTituloNotification = itemView.findViewById<View>(R.id.tvTituloNotification) as TextView
             tvCategoriaNotification = itemView.findViewById<View>(R.id.tvCategoriaNotification) as TextView
             tvHoraNotification = itemView.findViewById<View>(R.id.tvNotificationHora) as TextView
-
         }
     }
 }
