@@ -1,11 +1,14 @@
 package com.example.artelista.ui
 
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat
 import androidx.navigation.Navigation
 import com.example.artelista.R
 import com.example.artelista.databinding.FragmentUbicacionBinding
@@ -25,6 +28,15 @@ class UbicacionFragment : Fragment() {
         imgMapa.setOnClickListener{
             Navigation.findNavController(it).navigate(R.id.ubicaiondetFragment)
         }
+
+        val toolbar: Toolbar = fbinding!!.toolUbicacion
+        toolbar.navigationIcon = ContextCompat.getDrawable(view.context, R.drawable.ic_back )
+        toolbar.setTitle(R.string.strUbicacion)
+        toolbar.setTitleTextColor(Color.WHITE)
+        toolbar.setNavigationOnClickListener {
+            Navigation.findNavController(it).popBackStack(R.id.ubicacionFragment, true)
+        }
+
         return view
     }
 
