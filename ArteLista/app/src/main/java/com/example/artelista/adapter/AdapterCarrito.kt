@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.artelista.R
 import com.example.artelista.model.Carrito
@@ -33,11 +34,11 @@ class AdapterCarrito(Carritos: ArrayList<Carrito>, resource:Int, activity:Activi
         holder.tvPrecioArticulo.text = carrito.getPrecioCarrito()
         holder.tvTituloArticulo.text = carrito.getTituloCarrito()
         Picasso.get().load(carrito.getImagenCarrito()).into(holder.imgCompras)
-        /*holder.itemView.setOnClickListener{
+        holder.itemView.setOnClickListener{
             Navigation.findNavController(holder.itemView).navigate(
-                R.id.fragment_carritodet
+                R.id.carritoDetalleFragment
             )
-        }*/
+        }
     }
 
     override fun getItemCount(): Int {

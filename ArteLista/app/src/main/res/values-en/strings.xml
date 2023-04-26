@@ -37,4 +37,7 @@
     <string name="strTituloEvento">Subasta de cuerno de mamut</string>
     <string name="strCategoriaNotificacion">Subasta</string>
     <string name="strUbicacion">Ubicacion</string>
+    <string name="strCategoriaCarrito">On sale</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="strDescripcionArticulo">This article is on sale. This article is on sale. This article is on sale. This article is on sale.</string>
 </resources>
