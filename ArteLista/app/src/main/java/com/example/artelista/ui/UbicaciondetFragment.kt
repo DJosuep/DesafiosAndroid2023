@@ -14,10 +14,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [UbicaiondetFragment.newInstance] factory method to
+ * Use the [UbicaciondetFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class UbicaiondetFragment : Fragment() {
+class UbicaciondetFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -50,7 +50,7 @@ class UbicaiondetFragment : Fragment() {
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            UbicaiondetFragment().apply {
+            UbicaciondetFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

@@ -47,7 +47,7 @@
     </fragment>
     <fragment
         android:id="@+id/ubicaiondetFragment"
-        android:name="com.example.artelista.ui.UbicaiondetFragment"
+        android:name="com.example.artelista.ui.UbicaciondetFragment"
         android:label="fragment_ubicaiondet"
         tools:layout="@layout/fragment_ubicaiondet" />
     <fragment

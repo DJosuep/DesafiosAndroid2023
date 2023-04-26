@@ -40,4 +40,9 @@
     <string name="strCategoriaCarrito">On sale</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="strDescripcionArticulo">This article is on sale. This article is on sale. This article is on sale. This article is on sale.</string>
+    <string name="strUbicacionEvento">San juan</string>
+    <string name="strDireccionEvento">Del hotel los malandros</string>
+    <string name="strSitioWebEvento">www.uni.edu.ni</string>
+    <string name="strTelefonoEvento">0000-0000</string>
+    <string name="strTodo">TODO</string>
 </resources>
