@@ -36,4 +36,5 @@
     <string name="strCuenta">Cuenta</string>
     <string name="strTituloEvento">Subasta de cuerno de mamut</string>
     <string name="strCategoriaNotificacion">Subasta</string>
+    <string name="strUbicacion">Ubicacion</string>
 </resources>

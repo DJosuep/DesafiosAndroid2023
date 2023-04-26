@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.artelista.R
 import com.example.artelista.model.Notification
@@ -32,6 +33,10 @@ class AdapterNotifications(Notifications: ArrayList<Notification>,
         holder.tvTituloNotification.text = notification.getTituloNotification()
         holder.tvCategoriaNotification.text = notification.getCategoriaNotification()
         holder.tvHoraNotification.text = notification.getHoraNotification()
+        holder.itemView.setOnClickListener {
+            Navigation.findNavController(holder.itemView).navigate(
+                R.id.ubicacionFragment)
+        }
     }
     //-----------
     override fun getItemCount(): Int {
