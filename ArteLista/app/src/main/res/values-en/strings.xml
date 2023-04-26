@@ -24,11 +24,14 @@
     <string name="hintUserPass">Password</string>
     <string name="hintUserPassConfirm">Confirm Password</string>
     <string name="strCrearCuenta">Create Account</string>
+    <string name="strContenidoImagen">Image</string>
+    <string name="strTituloCarrito">The magic purchase</string>
+    <string name="strLike">Like</string>
     <string name="strInicioPresentacion1">Delivery in 24 hours</string>
     <string name="strInicioPresentacion2">Buy today and receibe tomorrow</string>
     <string name="strActivityMenu">MenuActivity</string>
     <string name="strInicio">Home</string>
-    <string name="strCarrito">Dashboard</string>
+    <string name="strCarrito">Shop cart</string>
     <string name="strNotificaciones">Notifications</string>
     <string name="strCuenta">Cuenta</string>
 </resources>
