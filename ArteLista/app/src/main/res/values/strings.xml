@@ -36,6 +36,8 @@
     <string name="strLike">Me gusta</string>
     <string name="strPrecioArticulo" translatable="false">1200</string>
     <string name="strMonedaArticulo" translatable="false">C$</string>
+    <string name="strVendedorArticulo" translatable="false">Julanito de tal</string>
+
     <!-- Fragment inicio -->
     <string name="strInicioPresentacion1">Envíos gratis en 24 horas.</string>
     <string name="strInicioPresentacion2">Compra hoy y recibe mañana.</string>
