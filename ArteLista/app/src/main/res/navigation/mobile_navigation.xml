@@ -15,7 +15,11 @@
         android:id="@+id/navigation_shopping_cart"
         android:name="com.example.artelista.ui.carrito.CarritoFragment"
         android:label="@string/strCarrito"
-        tools:layout="@layout/fragment_carrito" />
+        tools:layout="@layout/fragment_carrito" >
+        <action
+            android:id="@+id/action_navigation_shopping_cart_to_carritoDetalleFragment"
+            app:destination="@id/carritoDetalleFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_notifications"
@@ -46,4 +50,9 @@
         android:name="com.example.artelista.ui.UbicaiondetFragment"
         android:label="fragment_ubicaiondet"
         tools:layout="@layout/fragment_ubicaiondet" />
+    <fragment
+        android:id="@+id/carritoDetalleFragment"
+        android:name="com.example.artelista.ui.carrito.CarritoDetalleFragment"
+        android:label="fragment_carrito_detalle"
+        tools:layout="@layout/fragment_carrito_detalle" />
 </navigation>
