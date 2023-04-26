@@ -4,8 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="@dimen/tam3"
-    android:layout_marginBottom="@dimen/tam3"
-    app:cardCornerRadius="@dimen/margen5">
+    android:layout_marginBottom="@dimen/margen8"
+    app:cardCornerRadius="@dimen/margen4">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
             android:id="@+id/imgCompras"
             android:layout_width="match_parent"
             android:layout_height="@dimen/tam3"
-            android:src="@drawable/mercadolibre1"
+            android:background="@drawable/mercadolibre1"
             android:contentDescription="@string/strContenidoImagen"
             android:scaleType="centerCrop" />
 
@@ -27,6 +27,7 @@
             android:orientation="vertical"
             android:paddingStart="@dimen/margen3"
             android:paddingBottom="@dimen/margen8"
+            android:gravity="bottom"
             tools:ignore="RtlSymmetry">
 
             <TextView
@@ -38,7 +39,7 @@
                 android:textSize="@dimen/tamtexto2" />
 
             <TextView
-                android:id="@+id/tvTituloArtitulo"
+                android:id="@+id/tvTituloArticulo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/strTituloCarrito"
@@ -47,7 +48,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <CheckBox
