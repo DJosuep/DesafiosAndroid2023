@@ -1,21 +1,26 @@
 package com.example.artelista.ui.user
 
+import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.artelista.R
+import com.example.artelista.adapter.AdapterUser
 import com.example.artelista.databinding.FragmentUserBinding
+import com.example.artelista.model.User
 
 class UserFragment : Fragment() {
 
-    private var _binding: FragmentUserBinding? = null
+    private var fbinding: FragmentUserBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
-    private val binding get() = _binding!!
+    private val binding get() = fbinding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,18 +30,37 @@ class UserFragment : Fragment() {
         val dashboardViewModel =
             ViewModelProvider(this).get(UserViewModel::class.java)
 
-        _binding = FragmentUserBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        fbinding = FragmentUserBinding.inflate(inflater, container, false)
+        val view: View = binding.root
 
-        val textView: TextView = binding.textUser
-        dashboardViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
-        return root
+        //------
+        val reciclerUser : RecyclerView = fbinding!!.rvUsuario
+        reciclerUser.layoutManager = LinearLayoutManager(context)
+        val adapterNotification = AdapterUser(getUsers(), R.layout.item_usuario , Activity())
+        reciclerUser.adapter = adapterNotification
+
+        return view
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
+        fbinding = null
+    }
+
+    fun getUsers() : ArrayList<User>{
+        //-----
+        val users: ArrayList<User> = ArrayList()
+        //-----
+        users.add(User("Armando José Aguirre", "Muebles", "Guatemala"))
+        users.add(User("German Traña Obando", "Tecnología", "Costa Rica"))
+        users.add(User("Pol Ledent", "Tecnología", "Guatemala"))
+        users.add(User("Maribel Flores", "Muebles", "Honduras"))
+        users.add(User("Nana Tchelidze", "Juguetes","Honduras"))
+        users.add(User("Armando José Aguirre", "Juguetes", "Costa Rica"))
+        users.add(User("German Traña Obando","Muebles", "Guatemala"))
+        users.add(User("Pol Ledent", "Muebles", "Nicaragua"))
+        users.add(User("Maribel Flores", "Juguetes", "Nicaragua"))
+
+        return users
     }
 }

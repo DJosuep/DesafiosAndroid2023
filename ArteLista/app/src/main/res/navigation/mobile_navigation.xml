@@ -37,7 +37,11 @@
         android:id="@+id/navigation_user"
         android:name="com.example.artelista.ui.notifications.NotificationsFragment"
         android:label="@string/strNotificaciones"
-        tools:layout="@layout/fragment_user" />
+        tools:layout="@layout/fragment_user" >
+        <action
+            android:id="@+id/action_navigation_user_to_userDetalleFragment2"
+            app:destination="@id/userDetalleFragment" />
+    </fragment>
     <fragment
         android:id="@+id/ubicacionFragment"
         android:name="com.example.artelista.ui.UbicacionFragment"
@@ -59,4 +63,9 @@
         android:name="com.example.artelista.ui.carrito.CarritoDetalleFragment"
         android:label="fragment_carrito_detalle"
         tools:layout="@layout/fragment_carrito_detalle" />
+    <fragment
+        android:id="@+id/userDetalleFragment"
+        android:name="com.example.artelista.ui.user.UserDetalleFragment"
+        android:label="fragment_user_detalle"
+        tools:layout="@layout/fragment_user_detalle" />
 </navigation>

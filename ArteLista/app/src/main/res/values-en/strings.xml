@@ -46,4 +46,5 @@
     <string name="strTelefonoEvento">0000-0000</string>
     <string name="strTodo">TODO</string>
     <string name="strCategoriaVendedor">Furniture sellerman</string>
+    <string name="strUsuarios">Users</string>
 </resources>

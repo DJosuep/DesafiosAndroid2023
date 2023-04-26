@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -51,7 +50,7 @@ class NotificationsFragment : Fragment() {
     //-----Llenar con datos hardcode
     fun getNotifications() : ArrayList<Notification>{
         //-----
-        val notification: ArrayList<Notification> = ArrayList<Notification>()
+        val notification: ArrayList<Notification> = ArrayList()
         //-----
         notification.add(Notification("Subasta de pañuelos usados","Subasta","10:15"))
         notification.add(Notification("Subasta de pañuelos usados","Subasta","10:15"))
