@@ -31,6 +31,7 @@
     <string name="strNotificaciones">Novedades</string>
 
     <!-- Galería -->
+    <string name="strContenidoImagen">Imagen</string>
     <string name="strTituloCarrito">La compra mágica</string>
     <string name="strLike">Me gusta</string>
     <string name="strPrecioArticulo" translatable="false">1200</string>

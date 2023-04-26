@@ -1,39 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 <FrameLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <ImageView
         android:id="@+id/imgCompras"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/primary_color"
+        android:background="@drawable/mercadolibre1"
+        android:contentDescription="@string/strContenidoImagen"
         android:scaleType="centerCrop"
-        ></ImageView>
+        tools:ignore="ImageContrastCheck" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_gravity="bottom"
-        android:paddingLeft="@dimen/margen3"
+        android:paddingStart="@dimen/margen3"
         android:paddingBottom="@dimen/margen8"
-        android:background="@color/gris">
+        android:background="@drawable/mercadolibre1"
+        tools:ignore="RtlSymmetry">
+
         <TextView
             android:id="@+id/tvTituloVendedor"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textColor="@color/white"
-            android:textSize="@dimen/tamtexto3"></TextView>
+            android:textSize="@dimen/tamtexto3" />
+
         <TextView
             android:id="@+id/tvTituloArtitulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/strTituloCarrito"
             android:textColor="@color/white"
-            android:textSize="@dimen/tamtexto2"></TextView>
+            android:textSize="@dimen/tamtexto2" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -43,6 +49,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:button="@drawable/checkbox_selector"/>
+
             <TextView
                 android:id="@+id/tvLikeArticulo"
                 android:layout_width="wrap_content"
@@ -51,7 +58,8 @@
                 android:textSize="@dimen/tamtexto3"
                 android:textColor="@color/white"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/margen8"></TextView>
+                android:layout_marginStart="@dimen/margen8" />
+
             <TextView
                 android:id="@+id/tvPrecioArticulo"
                 android:layout_width="wrap_content"
@@ -61,7 +69,8 @@
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/margen8"></TextView>
+                android:layout_marginStart="@dimen/margen8" />
+
             <TextView
                 android:id="@+id/tvMonedaArticulo"
                 android:layout_width="wrap_content"
@@ -71,7 +80,7 @@
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/margen8"></TextView>
+                android:layout_marginStart="@dimen/margen8" />
         </LinearLayout>
     </LinearLayout>
 </FrameLayout>
