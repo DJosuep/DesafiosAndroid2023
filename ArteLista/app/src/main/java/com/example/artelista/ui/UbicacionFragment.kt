@@ -20,7 +20,7 @@ class UbicacionFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         fbinding = FragmentUbicacionBinding.inflate(inflater, container, false)
         val view: View = binding.root
         val imgMapa: ImageView = fbinding!!.imgMapa

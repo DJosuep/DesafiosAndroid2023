@@ -21,7 +21,7 @@ class UbicaciondetFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         fbinding = FragmentUbicaiondetBinding.inflate(inflater, container, false)
         val view: View = binding.root
 
@@ -37,8 +37,4 @@ class UbicaciondetFragment : Fragment() {
         return view
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-
-    }
 }
