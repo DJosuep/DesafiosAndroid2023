@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import androidx.navigation.Navigation
@@ -30,6 +31,7 @@ class UbicacionFragment : Fragment() {
         }
 
         val toolbar: Toolbar = fbinding!!.toolUbicacion
+        (activity as AppCompatActivity).setSupportActionBar(toolbar)
         toolbar.navigationIcon = ContextCompat.getDrawable(view.context, R.drawable.ic_back )
         toolbar.setTitle(R.string.strUbicacion)
         toolbar.setTitleTextColor(Color.WHITE)
