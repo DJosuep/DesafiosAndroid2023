@@ -13,11 +13,6 @@ import androidx.navigation.Navigation
 import com.example.artelista.R
 import com.example.artelista.databinding.FragmentCarritoDetalleBinding
 
-/**
- * A simple [Fragment] subclass.
- * Use the [CarritoDetalleFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class CarritoDetalleFragment : Fragment() {
     private var fbinding: FragmentCarritoDetalleBinding?=null
     private val binding get() = fbinding!!
@@ -25,7 +20,7 @@ class CarritoDetalleFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         fbinding = FragmentCarritoDetalleBinding.inflate(inflater, container, false)
         val view: View = binding.root
 
@@ -35,7 +30,7 @@ class CarritoDetalleFragment : Fragment() {
         toolbar.setTitle(R.string.strCarrito)
         toolbar.setTitleTextColor(Color.WHITE)
         toolbar.setNavigationOnClickListener {
-            Navigation.findNavController(it).popBackStack()
+            Navigation.findNavController(it).navigateUp()
         }
 
         return view

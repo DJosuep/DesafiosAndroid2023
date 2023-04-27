@@ -30,8 +30,7 @@ class UserFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val dashboardViewModel =
-            ViewModelProvider(this)[UserViewModel::class.java]
+        ViewModelProvider(this)[UserViewModel::class.java]
 
         fbinding = FragmentUserBinding.inflate(inflater, container, false)
         val view: View = binding.root
@@ -55,7 +54,7 @@ class UserFragment : Fragment() {
         fbinding = null
     }
 
-    fun getUsers() : ArrayList<User>{
+    private fun getUsers() : ArrayList<User>{
         //-----
         val users: ArrayList<User> = ArrayList()
         //-----

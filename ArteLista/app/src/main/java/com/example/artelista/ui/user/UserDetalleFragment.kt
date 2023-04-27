@@ -30,7 +30,7 @@ class UserDetalleFragment : Fragment() {
         toolbar.setTitle(R.string.strUsuarios)
         toolbar.setTitleTextColor(Color.WHITE)
         toolbar.setNavigationOnClickListener {
-            Navigation.findNavController(it).popBackStack()
+            Navigation.findNavController(it).navigateUp()
         }
         return view
     }

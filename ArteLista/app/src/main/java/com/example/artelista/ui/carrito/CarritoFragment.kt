@@ -30,8 +30,7 @@ class CarritoFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val CarritoViewModel =
-            ViewModelProvider(this)[CarritoViewModel::class.java]
+        ViewModelProvider(this)[CarritoViewModel::class.java]
 
         fbinding = FragmentCarritoBinding.inflate(inflater, container, false)
         val view: View = binding.root
@@ -49,7 +48,7 @@ class CarritoFragment : Fragment() {
         return view
     }
 
-    fun getCarrito(): ArrayList<Carrito> {
+    private fun getCarrito(): ArrayList<Carrito> {
         //--------------
         val carrito: ArrayList<Carrito> = ArrayList()
         //-------------

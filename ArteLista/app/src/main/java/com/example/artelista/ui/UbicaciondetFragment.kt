@@ -32,7 +32,7 @@ class UbicaciondetFragment : Fragment() {
         toolbar.setTitle(R.string.strUbicacion)
         toolbar.setTitleTextColor(Color.WHITE)
         toolbar.setNavigationOnClickListener {
-            Navigation.findNavController(it).popBackStack()
+            Navigation.findNavController(it).navigateUp()
         }
 
         return view

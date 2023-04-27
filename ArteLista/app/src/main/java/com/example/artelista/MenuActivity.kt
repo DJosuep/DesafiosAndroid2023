@@ -38,12 +38,9 @@ class MenuActivity : AppCompatActivity() {
         //Objects.requireNonNull(supportActionBar!!.setBackgroundDrawable(ColorDrawable(Color.WHITE)))
     }
 
-    protected fun configurarNavegacion(navHostFragment:NavHostFragment){
+    private fun configurarNavegacion(navHostFragment:NavHostFragment){
         val bmenu: BottomNavigationView = binding.navView
         NavigationUI.setupWithNavController(bmenu, navHostFragment.navController)
     }
 
-    private fun setContentView(HomeFragment: Any) {
-        TODO("Not yet implemented")
-    }
 }
