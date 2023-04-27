@@ -35,9 +35,9 @@
 
     <fragment
         android:id="@+id/navigation_user"
-        android:name="com.example.artelista.ui.notifications.NotificationsFragment"
+        android:name="com.example.artelista.ui.user.UserFragment"
         android:label="@string/strNotificaciones"
-        tools:layout="@layout/fragment_user" >
+        tools:layout="@layout/fragment_user">
         <action
             android:id="@+id/action_navigation_user_to_userDetalleFragment2"
             app:destination="@id/userDetalleFragment" />
