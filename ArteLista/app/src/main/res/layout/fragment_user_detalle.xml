@@ -79,7 +79,7 @@
              android:contentDescription="@string/strLike"
              app:layout_constraintTop_toBottomOf="@id/tvAcercaUsuario"
              app:layout_constraintLeft_toLeftOf="parent"
-             app:layout_constraintRight_toRightOf="parent"></Button>
+             app:layout_constraintRight_toRightOf="parent"/>
         <TextView
             android:id="@+id/tvDescripcionArtista"
             android:layout_width="wrap_content"
@@ -101,7 +101,8 @@
             android:layout_marginTop="@dimen/margen7"
             app:layout_constraintTop_toBottomOf="@id/btnAcercaDe"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"></ImageView>
+            app:layout_constraintRight_toRightOf="parent"
+            android:contentDescription="@string/strTodo"/>
         <TextView
             android:id="@+id/tvTwitterCuenta"
             android:layout_width="wrap_content"
@@ -111,6 +112,6 @@
             android:textAlignment="center"
             app:layout_constraintTop_toBottomOf="@id/imgTwitter"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"></TextView>
+            app:layout_constraintRight_toRightOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

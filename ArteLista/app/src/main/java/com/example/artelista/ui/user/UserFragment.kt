@@ -1,10 +1,13 @@
 package com.example.artelista.ui.user
 
 import android.app.Activity
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -28,10 +31,15 @@ class UserFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val dashboardViewModel =
-            ViewModelProvider(this).get(UserViewModel::class.java)
+            ViewModelProvider(this)[UserViewModel::class.java]
 
         fbinding = FragmentUserBinding.inflate(inflater, container, false)
         val view: View = binding.root
+
+        val toolbar: Toolbar = fbinding!!.tbUsuario
+        (activity as AppCompatActivity).setSupportActionBar(toolbar)
+        toolbar.setTitle(R.string.strUsuarios)
+        toolbar.setTitleTextColor(Color.WHITE)
 
         //------
         val reciclerUser : RecyclerView = fbinding!!.rvUsuario

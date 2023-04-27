@@ -31,7 +31,7 @@ class CarritoFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val CarritoViewModel =
-            ViewModelProvider(this).get(CarritoViewModel::class.java)
+            ViewModelProvider(this)[CarritoViewModel::class.java]
 
         fbinding = FragmentCarritoBinding.inflate(inflater, container, false)
         val view: View = binding.root
