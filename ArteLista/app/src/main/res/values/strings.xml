@@ -69,4 +69,7 @@
     <string name="strCategoriaVendedor">Vendedor de muebles</string>
     <string name="strPaisVendedor" translatable="false">Nicaragua</string>
     <string name="strUsuarios">Users</string>
+    <string name="strAcercaUsuario">Acerca de.</string>
+    <string name="strDescripcionUsuario">Usuario, usuario, usuario, usuario, usuario, usuario, usuario.</string>
+    <string name="strCuentaTwitter">\@usuario</string>
 </resources>

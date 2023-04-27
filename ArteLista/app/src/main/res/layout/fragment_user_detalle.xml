@@ -29,7 +29,7 @@
         tools:context=".ui.user.UserDetalleFragment">
 
         <ImageView
-            android:id="@+id/imgUsuarioDet"
+            android:id="@+id/imgUsuarioDetalle"
             android:layout_width="@dimen/margen7"
             android:layout_height="@dimen/margen7"
             android:background="@drawable/img_palacio"
@@ -37,23 +37,80 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            android:contentDescription="@string/strUsuarios">
-        </ImageView>
-
+            android:contentDescription="@string/strUsuarios"/>
         <TextView
-            android:id="@+id/tvNombreUsuarioDet"
+            android:id="@+id/tvNombreUsuarioDetalle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:text="Rafael Pérez"
+            android:text="@string/strNombreVendedor"
             android:textSize="@dimen/tamtexto2"
             android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imgUsuarioDet">
-        </TextView>
-
+            app:layout_constraintTop_toBottomOf="@id/imgUsuarioDetalle"/>
+        <TextView
+            android:id="@+id/tvPaisUsuarioDetalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gris_oscuro"
+            android:text="@string/strPaisVendedor"
+            android:textSize="@dimen/tamtexto2"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNombreUsuarioDetalle"/>
+        <TextView
+            android:id="@+id/tvAcercaUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/secondary_color"
+            android:text="@string/strAcercaUsuario"
+            android:textSize="@dimen/tamtexto3"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPaisUsuarioDetalle"/>
+         <Button
+             android:id="@+id/btnAcercaDe"
+             android:layout_width="@dimen/margen6"
+             android:layout_height="@dimen/margen6"
+             android:background="@drawable/ic_flecha_abajo"
+             android:contentDescription="@string/strLike"
+             app:layout_constraintTop_toBottomOf="@id/tvAcercaUsuario"
+             app:layout_constraintLeft_toLeftOf="parent"
+             app:layout_constraintRight_toRightOf="parent"></Button>
+        <TextView
+            android:id="@+id/tvDescripcionArtista"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margen8"
+            android:padding="@dimen/margen8"
+            android:text="@string/strDescripcionUsuario"
+            android:textSize="@dimen/tamtexto2"
+            android:textAlignment="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnAcercaDe"/>
+        <ImageView
+            android:id="@+id/imgTwitter"
+            android:layout_width="@dimen/margen7"
+            android:layout_height="@dimen/margen7"
+            android:background="@mipmap/img_twitter_foreground"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="@dimen/margen7"
+            app:layout_constraintTop_toBottomOf="@id/btnAcercaDe"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"></ImageView>
+        <TextView
+            android:id="@+id/tvTwitterCuenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strCuentaTwitter"
+            android:textSize="@dimen/tamtexto1"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/imgTwitter"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"></TextView>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

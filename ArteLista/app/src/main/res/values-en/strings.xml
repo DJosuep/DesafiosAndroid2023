@@ -47,4 +47,6 @@
     <string name="strTodo">TODO</string>
     <string name="strCategoriaVendedor">Furniture sellerman</string>
     <string name="strUsuarios">Users</string>
+    <string name="strAcercaUsuario">More about.</string>
+    <string name="strCuentaTwitter">\@usuario</string>
 </resources>
