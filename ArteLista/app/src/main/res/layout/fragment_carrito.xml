@@ -18,13 +18,6 @@
             android:id="@+id/tbCompras"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textStyle="bold"
-                android:textSize="@dimen/tamtexto2"
-                android:text="@string/strCarrito"
-                />
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 

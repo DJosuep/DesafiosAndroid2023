@@ -49,4 +49,5 @@
     <string name="strUsuarios">Users</string>
     <string name="strAcercaUsuario">More about.</string>
     <string name="strCuentaTwitter">\@usuario</string>
+    <string name="strGaleria">Galería</string>
 </resources>

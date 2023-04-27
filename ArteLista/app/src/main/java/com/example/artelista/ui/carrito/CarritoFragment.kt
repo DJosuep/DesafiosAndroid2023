@@ -1,10 +1,13 @@
 package com.example.artelista.ui.carrito
 
 import android.app.Activity
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -32,6 +35,11 @@ class CarritoFragment : Fragment() {
 
         fbinding = FragmentCarritoBinding.inflate(inflater, container, false)
         val view: View = binding.root
+
+        val toolbar: Toolbar = fbinding!!.tbCompras
+        (activity as AppCompatActivity).setSupportActionBar(toolbar)
+        toolbar.setTitle(R.string.strCarrito)
+        toolbar.setTitleTextColor(Color.WHITE)
 
         val recyclerCarrito: RecyclerView = fbinding!!.rvCompras
         recyclerCarrito.layoutManager = LinearLayoutManager(context)

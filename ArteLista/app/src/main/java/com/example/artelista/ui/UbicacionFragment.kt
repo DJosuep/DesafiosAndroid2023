@@ -36,7 +36,7 @@ class UbicacionFragment : Fragment() {
         toolbar.setTitle(R.string.strUbicacion)
         toolbar.setTitleTextColor(Color.WHITE)
         toolbar.setNavigationOnClickListener {
-            Navigation.findNavController(it).popBackStack(R.id.ubicacionFragment, true)
+            Navigation.findNavController(it).popBackStack()
         }
 
         return view
