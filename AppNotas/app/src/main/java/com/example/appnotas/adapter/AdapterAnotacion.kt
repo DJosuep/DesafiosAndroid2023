@@ -35,6 +35,7 @@ class AdapterAnotacion(var anotacionList: MutableList<Anotacion>,
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val anotacion = anotacionList[position]
+        holder.setListener(anotacion)
         holder.binding.tvTarea.text = anotacion.task
     }
     fun add(anota: Anotacion){
