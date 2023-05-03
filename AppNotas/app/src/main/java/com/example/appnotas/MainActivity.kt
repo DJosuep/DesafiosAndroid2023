@@ -31,6 +31,15 @@ class MainActivity : AppCompatActivity(), OnClickListener {
             layoutManager = LinearLayoutManager(this@MainActivity)
             adapter = anotacionAdapter
         }
+
+        binding.btnAgregar.setOnClickListener {
+            if (binding.tvDescipcionTarea.text.toString().isNotBlank){
+                val anota = Anotacion((anotacionAdapter.itemCount + 1).toLong(),
+                                        binding.tvDescripcionTarea.text.toString())
+                addAnotacion(anota)
+                binding.tvDescripcionTarea.text?.clear()
+            }
+        }
     }
 
     override fun onClick(anota: Anotacion) {
