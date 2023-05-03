@@ -8,11 +8,44 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="@dimen/margen8dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="@dimen/margen320dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/strHintBusqueda"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tvDescripcionTarea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <ImageView
+                android:layout_width="@dimen/margen60dp"
+                android:layout_height="@dimen/margen60dp"
+                android:layout_marginStart="@dimen/margen8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_add"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="@dimen/margen16dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/strHintBusqueda"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvAnotaciones"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:listitem="@layout/item_notas"/>
     </LinearLayout>
+
+
 </ScrollView>
