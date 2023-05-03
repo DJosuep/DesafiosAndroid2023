@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
         }
 
         binding.btnAgregar.setOnClickListener {
-            if (binding.tvDescipcionTarea.text.toString().isNotBlank){
+            if (binding.tvDescripcionTarea.text.toString().isNotBlank()){
                 val anota = Anotacion((anotacionAdapter.itemCount + 1).toLong(),
                                         binding.tvDescripcionTarea.text.toString())
                 addAnotacion(anota)

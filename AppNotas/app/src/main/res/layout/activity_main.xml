@@ -28,9 +28,11 @@
                     android:layout_height="wrap_content"/>
             </com.google.android.material.textfield.TextInputLayout>
             <ImageView
+                android:id="@+id/btnAgregar"
                 android:layout_width="@dimen/margen60dp"
                 android:layout_height="@dimen/margen60dp"
                 android:layout_marginStart="@dimen/margen8dp"
+                android:contentDescription="@string/add_nota"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_add"/>
             <com.google.android.material.textfield.TextInputLayout
