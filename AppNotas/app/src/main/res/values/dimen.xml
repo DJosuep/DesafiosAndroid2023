@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="margen8dp">8dp</dimen>
+    <dimen name="margen16dp">16dp</dimen>
 </resources>
