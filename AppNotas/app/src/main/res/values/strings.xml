@@ -2,4 +2,5 @@
     <string name="app_name">AppNotas</string>
     <string name="strTarea">Tarea</string>
     <string name="strHintBusqueda">Ingrese la tarea</string>
+    <string name="add_nota">agregar nota</string>
 </resources>
