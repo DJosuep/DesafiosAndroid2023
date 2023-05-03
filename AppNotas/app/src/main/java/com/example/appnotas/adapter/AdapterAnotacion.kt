@@ -1,5 +1,6 @@
 package com.example.appnotas.adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,14 +10,16 @@ import com.example.appnotas.R
 import com.example.appnotas.databinding.ItemNotasBinding
 import com.example.appnotas.model.Anotacion
 
-class AdapterAnotacion(var anotacionList: MutableList<Anotacion>,
-                        private val listener: OnClickListener):
+class AdapterAnotacion(
+    private var anotacionList: MutableList<Anotacion>,
+    private val listener: OnClickListener):
     RecyclerView.Adapter<AdapterAnotacion.ViewHolder>(){
 
         inner class ViewHolder(view: View): RecyclerView.ViewHolder(view){
             val binding = ItemNotasBinding.bind(view)
 
             //Eliminar item de la lista
+            @Suppress("UNUSED_EXPRESSION")
             fun setListener(anota: Anotacion){
                 binding.root.setOnClickListener {
                     listener.onClick(anota)
@@ -38,10 +41,12 @@ class AdapterAnotacion(var anotacionList: MutableList<Anotacion>,
         holder.setListener(anotacion)
         holder.binding.tvTarea.text = anotacion.task
     }
+    @SuppressLint("NotifyDataSetChanged")
     fun add(anota: Anotacion){
         anotacionList.add(anota)
         notifyDataSetChanged()
     }
+    @SuppressLint("NotifyDataSetChanged")
     fun remove(anota: Anotacion){
         anotacionList.remove(anota)
         notifyDataSetChanged()
