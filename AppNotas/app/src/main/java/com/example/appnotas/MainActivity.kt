@@ -33,7 +33,15 @@ class MainActivity : AppCompatActivity(), OnClickListener {
         }
     }
 
-    override fun onClick(anotacion: Anotacion) {
-        TODO("Not yet implemented")
+    override fun onClick(anota: Anotacion) {
+        deleteAnotacion(anota)
+    }
+
+    private fun deleteAnotacion(anota: Anotacion) {
+        anotacionAdapter.remove(anota)
+    }
+
+    private fun addAnotacion(anota: Anotacion) {
+        anotacionAdapter.add(anota)
     }
 }
