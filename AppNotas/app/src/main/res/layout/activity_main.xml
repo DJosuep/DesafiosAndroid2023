@@ -22,10 +22,13 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/strHintBusqueda"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/tvDescripcionTarea"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    tools:ignore="TextContrastCheck" />
+                
             </com.google.android.material.textfield.TextInputLayout>
             <ImageView
                 android:id="@+id/btnAgregar"
