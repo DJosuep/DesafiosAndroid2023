@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="margen8dp">8dp</dimen>
-    <dimen name="margen16dp">16dp</dimen>
-    <dimen name="margen60dp">60dp</dimen>
-    <dimen name="margen320dp">320dp</dimen>
-</resources>
