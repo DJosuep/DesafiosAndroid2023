@@ -44,6 +44,10 @@ class MainActivity : AppCompatActivity(), OnClickListener {
         }
     }
 
+    override fun onChecked(anotacion: Anotacion) {
+        TODO("Not yet implemented")
+    }
+
     override fun onClick(anota: Anotacion) {
         deleteAnotacion(anota)
     }
