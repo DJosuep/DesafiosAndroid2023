@@ -11,6 +11,8 @@ class MainActivity : AppCompatActivity(), OnClickListener {
     //-----------------
     private lateinit var binding: ActivityMainBinding
     private lateinit var anotacionAdapter: AdapterAnotacion
+    private lateinit var anotacionAdapterF: AdapterAnotacion
+
     //-----------------
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,13 +27,20 @@ class MainActivity : AppCompatActivity(), OnClickListener {
             Anotacion(5, "xd ya no se que poner"),
             Anotacion(6, "Yo no lo descargo porque lo tengo", true)
         )
-
+        //Pendientes
         anotacionAdapter = AdapterAnotacion(data, this)
         binding.rvAnotaciones.apply {
             layoutManager = LinearLayoutManager(this@MainActivity)
             adapter = anotacionAdapter
         }
 
+        //Finalizadas
+        anotacionAdapterF = AdapterAnotacion(data, this)
+        binding.rvAnotaciones.apply {
+            layoutManager = LinearLayoutManager(this@MainActivity)
+            adapter = anotacionAdapter
+        }
+        
         binding.btnAgregar.setOnClickListener {
             if (binding.tvDescripcionTarea.text.toString().isNotBlank()){
                 val anota = Anotacion((anotacionAdapter.itemCount + 1).toLong(),
