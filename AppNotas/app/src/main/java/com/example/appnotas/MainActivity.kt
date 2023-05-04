@@ -38,6 +38,8 @@ class MainActivity : AppCompatActivity(), OnClickListener {
                                         binding.tvDescripcionTarea.text.toString())
                 addAnotacion(anota)
                 binding.tvDescripcionTarea.text?.clear()
+            } else {
+                binding.tvDescripcionTarea.error = getString(R.string.strValidacionError)
             }
         }
     }
