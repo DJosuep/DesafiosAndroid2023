@@ -51,8 +51,29 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
+        <TextView
+            android:id="@+id/tvTituloPendientes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/margen8dp"
+            android:textAppearance="?attr/textAppearanceOverline"
+            android:text="@string/strPendientes"
+            />
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvAnotaciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_notas"/>
+        <TextView
+            android:id="@+id/tvTituloFinalizadas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/margen8dp"
+            android:textAppearance="?attr/textAppearanceOverline"
+            android:text="@string/strFinalizadas"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAnotacionesFinalizadas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:listitem="@layout/item_notas"/>
