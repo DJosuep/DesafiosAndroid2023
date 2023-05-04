@@ -19,28 +19,20 @@ class MainActivity : AppCompatActivity(), OnClickListener {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val data = mutableListOf(
-            Anotacion(1, "Tarea AWS"),
-            Anotacion(2, "Registros secretos"),
-            Anotacion(3, "Avenger Infinit"),
-            Anotacion(4, "Contraseña del banco"),
-            Anotacion(5, "xd ya no se que poner"),
-            Anotacion(6, "Yo no lo descargo porque lo tengo", true)
-        )
         //Pendientes
-        anotacionAdapter = AdapterAnotacion(data, this)
+        anotacionAdapter = AdapterAnotacion(mutableListOf(), this)
         binding.rvAnotaciones.apply {
             layoutManager = LinearLayoutManager(this@MainActivity)
             adapter = anotacionAdapter
         }
 
         //Finalizadas
-        anotacionAdapterF = AdapterAnotacion(data, this)
-        binding.rvAnotaciones.apply {
+        anotacionAdapterF = AdapterAnotacion(mutableListOf(), this)
+        binding.rvAnotacionesFinalizadas.apply {
             layoutManager = LinearLayoutManager(this@MainActivity)
-            adapter = anotacionAdapter
+            adapter = anotacionAdapterF
         }
-        
+
         binding.btnAgregar.setOnClickListener {
             if (binding.tvDescripcionTarea.text.toString().isNotBlank()){
                 val anota = Anotacion((anotacionAdapter.itemCount + 1).toLong(),
@@ -53,12 +45,31 @@ class MainActivity : AppCompatActivity(), OnClickListener {
         }
     }
 
+
     override fun onChecked(anotacion: Anotacion) {
         TODO("Not yet implemented")
     }
+    override fun onStart() {
+        super.onStart()
+        getData()
+    }
 
-    override fun onClick(anota: Anotacion) {
-        deleteAnotacion(anota)
+    private fun getData() {
+        val data = mutableListOf(
+            Anotacion(1, "Tarea AWS"),
+            Anotacion(2, "Registros secretos"),
+            Anotacion(3, "Avenger Infinit"),
+            Anotacion(4, "Contraseña del banco"),
+            Anotacion(5, "xd ya no se que poner"),
+            Anotacion(6, "Yo no lo descargo porque lo tengo", true)
+        )
+        data.forEach {
+            addAnotacion(it)
+        }
+    }
+
+    override fun onClick(anotacion: Anotacion) {
+        deleteAnotacion(anotacion)
     }
 
     private fun deleteAnotacion(anota: Anotacion) {
@@ -66,6 +77,11 @@ class MainActivity : AppCompatActivity(), OnClickListener {
     }
 
     private fun addAnotacion(anota: Anotacion) {
-        anotacionAdapter.add(anota)
+        if (anota.finish){
+            anotacionAdapterF.add(anota)
+        }else{
+            anotacionAdapter.add(anota)
+        }
+
     }
 }
