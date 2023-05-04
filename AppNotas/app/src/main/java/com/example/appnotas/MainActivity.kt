@@ -2,6 +2,7 @@ package com.example.appnotas
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.appnotas.adapter.AdapterAnotacion
 import com.example.appnotas.databinding.ActivityMainBinding
@@ -45,10 +46,6 @@ class MainActivity : AppCompatActivity(), OnClickListener {
         }
     }
 
-
-    override fun onChecked(anotacion: Anotacion) {
-        TODO("Not yet implemented")
-    }
     override fun onStart() {
         super.onStart()
         getData()
@@ -68,12 +65,27 @@ class MainActivity : AppCompatActivity(), OnClickListener {
         }
     }
 
-    override fun onClick(anotacion: Anotacion) {
+    override fun onClick(anotacion: Anotacion, adapters: AdapterAnotacion) {
+         val builder = AlertDialog.Builder(this)
+             .setTitle(getString(R.string.strDialogTitulo))
+             .setPositiveButton(getString(R.string.strAceptar)) { dialogInterface, i ->
+                 adapters.remove(anotacion)
+             }
+             .setNegativeButton(getString(R.string.strCancelar), null)
+        builder.create().show()
+    }
+
+    override fun onChecked(anotacion: Anotacion){
         deleteAnotacion(anotacion)
+        addAnotacion(anotacion)
     }
 
     private fun deleteAnotacion(anota: Anotacion) {
-        anotacionAdapter.remove(anota)
+        if (anota.finish){
+            anotacionAdapter.remove(anota)
+        }else{
+            anotacionAdapterF.remove(anota)
+        }
     }
 
     private fun addAnotacion(anota: Anotacion) {
@@ -82,6 +94,5 @@ class MainActivity : AppCompatActivity(), OnClickListener {
         }else{
             anotacionAdapter.add(anota)
         }
-
     }
 }

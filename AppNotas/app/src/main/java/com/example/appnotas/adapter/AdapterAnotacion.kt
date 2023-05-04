@@ -27,10 +27,10 @@ class AdapterAnotacion(
             fun setListener(anota: Anotacion){
                 binding.checkFinalizado.setOnClickListener{
                     anota.finish = (it as CheckBox).isChecked
-                    notifyDataSetChanged()
+                    listener.onChecked(anota)
                 }
                 binding.root.setOnClickListener {
-                    listener.onClick(anota)
+                    listener.onClick(anota, this@AdapterAnotacion)
                     true
                 }
             }

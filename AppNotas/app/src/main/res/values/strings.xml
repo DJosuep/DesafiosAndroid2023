@@ -6,4 +6,7 @@
     <string name="strValidacionError">Campo requerido ...</string>
     <string name="strPendientes">PENDIENTES</string>
     <string name="strFinalizadas">FINALIZADAS</string>
+    <string name="strDialogTitulo">¿Está seguro de eliminar el registro?</string>
+    <string name="strAceptar">Aceptar</string>
+    <string name="strCancelar">Cancelar</string>
 </resources>
