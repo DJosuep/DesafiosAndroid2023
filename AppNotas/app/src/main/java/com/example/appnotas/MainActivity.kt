@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
             Anotacion(3, "Avenger Infinit"),
             Anotacion(4, "Contraseña del banco"),
             Anotacion(5, "xd ya no se que poner"),
-            Anotacion(6, "Yo no lo descargo porque lo tengo")
+            Anotacion(6, "Yo no lo descargo porque lo tengo", true)
         )
 
         anotacionAdapter = AdapterAnotacion(data, this)
