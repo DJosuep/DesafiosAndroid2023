@@ -40,6 +40,7 @@ class AdapterAnotacion(
         val anotacion = anotacionList[position]
         holder.setListener(anotacion)
         holder.binding.tvTarea.text = anotacion.task
+        holder.binding.checkFinalizado.isChecked = anotacion.finish
     }
     @SuppressLint("NotifyDataSetChanged")
     fun add(anota: Anotacion){
