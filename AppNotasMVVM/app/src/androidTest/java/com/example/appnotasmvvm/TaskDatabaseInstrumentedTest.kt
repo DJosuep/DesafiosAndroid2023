@@ -4,8 +4,8 @@ import android.content.Context
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.example.appnotasmvvm.data.tasks.TaskDao
-import com.example.appnotasmvvm.data.tasks.TaskDatabase
+import com.example.appnotasmvvm.data.tasks.local.TaskDao
+import com.example.appnotasmvvm.data.tasks.local.TaskDatabase
 import com.example.appnotasmvvm.data.tasks.TaskEntity
 import junit.framework.TestCase.assertEquals
 import org.junit.After

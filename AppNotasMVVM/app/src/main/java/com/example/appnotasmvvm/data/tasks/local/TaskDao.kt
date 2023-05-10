@@ -1,10 +1,11 @@
-package com.example.appnotasmvvm.data.tasks
+package com.example.appnotasmvvm.data.tasks.local
 
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
+import com.example.appnotasmvvm.data.tasks.TaskEntity
 import com.example.appnotasmvvm.utils.Constants
 
 @Dao

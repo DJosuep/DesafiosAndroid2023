@@ -2,8 +2,8 @@ package com.example.appnotasmvvm.di
 
 import android.content.Context
 import androidx.room.Room
-import com.example.appnotasmvvm.data.tasks.TaskDao
-import com.example.appnotasmvvm.data.tasks.TaskDatabase
+import com.example.appnotasmvvm.data.tasks.local.TaskDao
+import com.example.appnotasmvvm.data.tasks.local.TaskDatabase
 import com.example.appnotasmvvm.utils.Constants
 import dagger.Module
 import dagger.Provides
@@ -18,7 +18,7 @@ object TaskModule {
 
     @Singleton
     @Provides
-    fun providesTaskDatabase(@ApplicationContext app:Context) : TaskDatabase{
+    fun providesTaskDatabase(@ApplicationContext app:Context) : TaskDatabase {
         return Room.databaseBuilder(
             app,
             TaskDatabase::class.java,
