@@ -34,6 +34,9 @@ class MainActivity : AppCompatActivity(), OnClickListener {
             adapter = anotacionAdapterF
         }
 
+        //AgregarAnotaciones
+        getData()
+
         binding.btnAgregar.setOnClickListener {
             if (binding.tvDescripcionTarea.text.toString().isNotBlank()){
                 val anota = Anotacion((anotacionAdapter.itemCount + 1).toLong(),
@@ -46,20 +49,8 @@ class MainActivity : AppCompatActivity(), OnClickListener {
         }
     }
 
-    override fun onStart() {
-        super.onStart()
-        getData()
-    }
-
     private fun getData() {
-        val data = mutableListOf(
-            Anotacion(1, "Tarea AWS"),
-            Anotacion(2, "Registros secretos"),
-            Anotacion(3, "Avenger Infinit"),
-            Anotacion(4, "Contraseña del banco"),
-            Anotacion(5, "xd ya no se que poner"),
-            Anotacion(6, "Yo no lo descargo porque lo tengo", true)
-        )
+        val data =
         data.forEach {
             addAnotacion(it)
         }
