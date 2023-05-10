@@ -1,4 +1,4 @@
-package com.example.appnotasmvvm.data.tasks
+package com.example.appnotasmvvm.data.tasks.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
