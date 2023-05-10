@@ -9,4 +9,9 @@
     <string name="strDialogTitulo">¿Está seguro de eliminar el registro?</string>
     <string name="strAceptar">Aceptar</string>
     <string name="strCancelar">Cancelar</string>
+    <string name="strAddTask">Se agrego la tarea</string>
+    <string name="strErrorAddTask">Error al agregar tarea</string>
+    <string name="strDeleteTask">Tarea eliminada</string>
+    <string name="strErrorDeleteTask">Error al eliminar tarea</string>
+    <string name="strErrorUpdateTask">Error al actualizar tarea</string>
 </resources>
