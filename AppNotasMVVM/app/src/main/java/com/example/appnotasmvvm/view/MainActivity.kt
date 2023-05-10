@@ -1,4 +1,4 @@
-package com.example.appnotasmvvm
+package com.example.appnotasmvvm.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

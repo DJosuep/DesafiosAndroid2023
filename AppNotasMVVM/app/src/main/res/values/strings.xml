@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">AppNotasMVVM</string>
+    <string name="strTarea">Tarea</string>
+    <string name="strHintBusqueda">Ingrese la tarea</string>
+    <string name="add_nota">agregar nota</string>
+    <string name="strValidacionError">Campo requerido…</string>
+    <string name="strPendientes">PENDIENTES</string>
+    <string name="strFinalizadas">FINALIZADAS</string>
+    <string name="strDialogTitulo">¿Está seguro de eliminar el registro?</string>
+    <string name="strAceptar">Aceptar</string>
+    <string name="strCancelar">Cancelar</string>
+    <string name="strAddTask">Se agrego la tarea</string>
+    <string name="strErrorAddTask">Error al agregar tarea</string>
+    <string name="strDeleteTask">Tarea eliminada</string>
+    <string name="strErrorDeleteTask">Error al eliminar tarea</string>
+    <string name="strErrorUpdateTask">Error al actualizar tarea</string>
 </resources>
