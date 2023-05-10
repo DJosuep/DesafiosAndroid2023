@@ -32,7 +32,7 @@
                     android:layout_height="wrap_content"
                     tools:ignore="TextContrastCheck"
                     android:maxLength="@integer/descripcion_maxlength"
-                    android:inputType="textCapCharacters"
+                    android:inputType="text"
                     android:imeOptions="actionDone"/>
                 
             </com.google.android.material.textfield.TextInputLayout>
