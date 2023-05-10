@@ -52,10 +52,10 @@ class MainActivity : AppCompatActivity(), OnClickListener {
                 if (anota.id != Constants.ID_ERROR){
                     addAnotacion(anota)
                     binding.tvDescripcionTarea.text?.clear()
-                    Snackbar.make(binding.root, "Se agreg tarea", Snackbar.LENGTH_SHORT).show()
+                    Snackbar.make(binding.root, R.string.strAddTask, Snackbar.LENGTH_SHORT).show()
                     return@setOnClickListener
                 }
-                Snackbar.make(binding.root, "Error al agregar tarea", Snackbar.LENGTH_SHORT).show()
+                Snackbar.make(binding.root, R.string.strErrorAddTask, Snackbar.LENGTH_SHORT).show()
             } else {
                 binding.tvDescripcionTarea.error = getString(R.string.strValidacionError)
             }
@@ -72,13 +72,13 @@ class MainActivity : AppCompatActivity(), OnClickListener {
     override fun onClick(anotacion: Anotacion, adapters: AdapterAnotacion) {
          val builder = AlertDialog.Builder(this)
              .setTitle(getString(R.string.strDialogTitulo))
-             .setPositiveButton(getString(R.string.strAceptar)) { dialogInterface, i ->
+             .setPositiveButton(getString(R.string.strAceptar)) { _, _ ->
                  if (database.deleteTask(anotacion)){
                      adapters.remove(anotacion)
-                     Snackbar.make(binding.root, "Se a eliminado la tarea correctamente", Snackbar.LENGTH_SHORT).show()
+                     Snackbar.make(binding.root, R.string.strDeleteTask, Snackbar.LENGTH_SHORT).show()
                      return@setPositiveButton
                  }
-                 Snackbar.make(binding.root, "Error al eliminar tarea", Snackbar.LENGTH_SHORT).show()
+                 Snackbar.make(binding.root, R.string.strErrorDeleteTask, Snackbar.LENGTH_SHORT).show()
              }
              .setNegativeButton(getString(R.string.strCancelar), null)
         builder.create().show()
@@ -90,7 +90,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
             addAnotacion(anotacion)
             return
         }
-        Snackbar.make(binding.root, "Error al actualizar tarea", Snackbar.LENGTH_SHORT).show()
+        Snackbar.make(binding.root, R.string.strErrorUpdateTask, Snackbar.LENGTH_SHORT).show()
     }
 
     private fun deleteAnotacion(anota: Anotacion) {
