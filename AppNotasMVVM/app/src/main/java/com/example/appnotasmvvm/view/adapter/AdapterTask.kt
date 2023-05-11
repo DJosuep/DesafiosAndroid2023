@@ -13,12 +13,19 @@ import com.example.appnotasmvvm.databinding.ItemTaskBinding
 import com.example.appnotasmvvm.domain.tasks.model.Task
 
 class AdapterTask(
-    private var taskList: MutableList<Task>,
     private val listener: OnClickListener
-):
-    RecyclerView.Adapter<AdapterTask.ViewHolder>(){
+): RecyclerView.Adapter<AdapterTask.ViewHolder>(){
+
+    private var taskList: MutableList<Task> = mutableListOf()
 
     private lateinit var context: Context
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun updateTasks(tasks: MutableList<Task>){
+        this.taskList = tasks
+        notifyDataSetChanged()
+    }
+
     inner class ViewHolder(view: View): RecyclerView.ViewHolder(view){
         val binding = ItemTaskBinding.bind(view)
 
@@ -58,6 +65,7 @@ class AdapterTask(
             holder.binding.tvTarea.setTextSize(TypedValue.COMPLEX_UNIT_SP, context.resources.getDimension(R.dimen.tamtexto2))
         }
     }
+
     @SuppressLint("NotifyDataSetChanged")
     fun add(task: Task){
         taskList.add(task)

@@ -31,6 +31,7 @@ android {
     }
     kotlinOptions {
         jvmTarget = '17'
+        allWarningsAsErrors = false
     }
 
     viewBinding {
@@ -40,14 +41,24 @@ android {
 
 dependencies {
 
+    //Coorutinas
+    def corutineVersion = "1.6.4"
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$corutineVersion")
+
+    //ViewModel
+    def lifecycleVersion = "2.6.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion")
+
     //Dagger - Hilt
-    implementation 'com.google.dagger:hilt-android:2.46'
-    kapt 'com.google.dagger:hilt-compiler:2.46'
+    def hiltVersion = "2.46"
+    implementation "com.google.dagger:hilt-android:$hiltVersion"
+    kapt("com.google.dagger:hilt-compiler:$hiltVersion")
 
     //Room dependences
     def room_version = "2.5.1"
-
     implementation("androidx.room:room-runtime:$room_version")
+    //annotationProcessor("androidx.room:room-compiler:$room_version")
     kapt("androidx.room:room-compiler:$room_version")
 
     // Default dependences
@@ -55,6 +66,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation "androidx.activity:activity-ktx:1.7.1"
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
