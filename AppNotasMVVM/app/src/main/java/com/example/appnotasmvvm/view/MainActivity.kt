@@ -2,6 +2,7 @@ package com.example.appnotasmvvm.view
 
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.appnotasmvvm.R
@@ -71,10 +72,18 @@ class MainActivity : AppCompatActivity(), com.example.appnotasmvvm.utils.OnClick
         anotacionAdapterF.updateTasks(cacheTaskFinalized)
     }
     override fun onChecked(task: Task) {
-        TODO("implementar suceso de cambiar de recycleview al darle check a la task")
+        mainViewModel.updateTask(task)
     }
 
     override fun onClick(task: Task, adapters: AdapterTask) {
-        TODO("implementar suceso de eliminar al darle click a la task")
+        val builder = AlertDialog.Builder(this)
+            .setTitle(getString(R.string.strDialogTitulo))
+            .setPositiveButton(getString(R.string.strAceptar)) { _, _ ->
+                mainViewModel.deleteTask(task)
+                Snackbar.make(binding.root, R.string.strDeleteTask, Snackbar.LENGTH_SHORT).show()
+                return@setPositiveButton
+            }
+            .setNegativeButton(getString(R.string.strCancelar), null)
+        builder.create().show()
     }
 }
