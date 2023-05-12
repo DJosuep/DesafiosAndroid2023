@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="@dimen/margen8dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="@dimen/margen320dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/strHintBusqueda"
+                app:counterEnabled="true"
+                app:counterMaxLength="@integer/descripcion_maxlength"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tvDescripcionTarea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="TextContrastCheck"
+                    android:maxLength="@integer/descripcion_maxlength"
+                    android:inputType="text"
+                    android:imeOptions="actionDone"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <ImageView
+                android:id="@+id/btnAgregar"
+                android:layout_width="@dimen/margen60dp"
+                android:layout_height="@dimen/margen60dp"
+                android:layout_marginStart="@dimen/margen8dp"
+                android:contentDescription="@string/add_nota"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_add"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="@dimen/margen16dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/strHintBusqueda"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tvTituloPendientes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/margen8dp"
+            android:textAppearance="?attr/textAppearanceOverline"
+            android:text="@string/strPendientes"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAnotaciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_task"/>
+        <TextView
+            android:id="@+id/tvTituloFinalizadas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/margen8dp"
+            android:textAppearance="?attr/textAppearanceOverline"
+            android:text="@string/strFinalizadas"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAnotacionesFinalizadas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_task"/>
+    </LinearLayout>
+
+
+</ScrollView>
