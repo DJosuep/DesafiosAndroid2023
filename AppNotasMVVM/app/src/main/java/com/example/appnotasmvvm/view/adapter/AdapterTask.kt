@@ -7,17 +7,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
 import androidx.recyclerview.widget.RecyclerView
-import com.example.appnotasmvvm.utils.OnClickListener
 import com.example.appnotasmvvm.R
 import com.example.appnotasmvvm.databinding.ItemTaskBinding
 import com.example.appnotasmvvm.domain.tasks.model.Task
+import com.example.appnotasmvvm.utils.OnClickListener
 
 class AdapterTask(
     private val listener: OnClickListener
 ): RecyclerView.Adapter<AdapterTask.ViewHolder>(){
-
     private var taskList: MutableList<Task> = mutableListOf()
-
     private lateinit var context: Context
 
     @SuppressLint("NotifyDataSetChanged")
@@ -43,7 +41,6 @@ class AdapterTask(
         }
         //----------------------------
     }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         context = parent.context
         val view = LayoutInflater.from(context).inflate(R.layout.item_task, parent, false)
@@ -59,21 +56,11 @@ class AdapterTask(
         holder.binding.checkFinalizado.isChecked = tasks.finalized
 
         if(tasks.finalized){
-            holder.binding.tvTarea.setTextSize(TypedValue.COMPLEX_UNIT_SP,context.resources.getDimension(R.dimen.tamtexto1))
+            holder.binding.tvTarea.setTextSize(TypedValue.COMPLEX_UNIT_SP,context.resources.getDimension(
+                R.dimen.tamtexto1))
         }
         else{
             holder.binding.tvTarea.setTextSize(TypedValue.COMPLEX_UNIT_SP, context.resources.getDimension(R.dimen.tamtexto2))
         }
-    }
-
-    @SuppressLint("NotifyDataSetChanged")
-    fun add(task: Task){
-        taskList.add(task)
-        notifyDataSetChanged()
-    }
-    @SuppressLint("NotifyDataSetChanged")
-    fun remove(task: Task){
-        taskList.remove(task)
-        notifyDataSetChanged()
     }
 }

@@ -11,14 +11,14 @@ import com.example.appnotasmvvm.utils.Constants
 @Dao
 interface TaskDao {
     @Query("SELECT * FROM ${Constants.ENTITY_TASK}")
-    fun getAll(): List<TaskEntity>
+    suspend fun getAll(): List<TaskEntity>
 
     @Insert
-    fun insert(taskEntity: TaskEntity)
+    suspend fun insert(taskEntity: TaskEntity)
 
     @Update
-    fun update(taskEntity: TaskEntity)
+    suspend fun update(taskEntity: TaskEntity)
 
     @Delete
-    fun delete(taskEntity: TaskEntity)
+    suspend fun delete(taskEntity: TaskEntity)
 }

@@ -25,29 +25,31 @@ class MainActivityViewModel @Inject constructor(
     private var _tasksLiveData: MutableLiveData<List<Task>> = MutableLiveData()
     val tasksLiveData : LiveData<List<Task>> get() = _tasksLiveData
 
-    fun getAllTaskList() {
-        viewModelScope.launch(Dispatchers.IO) {
-            val fetchTasks = useCaseGetTasks()
-            withContext(Dispatchers.Main){
-                _tasksLiveData.postValue(fetchTasks)
-            }
-        }
+    init {
+        getAllTaskList()
     }
+    private fun getAllTaskList() = viewModelScope.launch {
+            _tasksLiveData.postValue(useCaseGetTasks())
+        }
+
     fun deleteTask(task: Task){
-        viewModelScope.launch(Dispatchers.IO) {
+        viewModelScope.launch {
             useCaseDeleteTask(task)
         }
+        getAllTaskList()
     }
 
     fun updateTask(task: Task){
         viewModelScope.launch(Dispatchers.IO) {
             useCaseUpdateTask(task)
         }
+        getAllTaskList()
     }
 
     fun addTask(task: Task){
         viewModelScope.launch {
             useCaseAddTask(task)
         }
+        getAllTaskList()
     }
 }

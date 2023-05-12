@@ -6,7 +6,7 @@ object Constants {
     const val ENTITY_TASK = "entity_task"
 
     //----------
-    const val PROPERTY_ID = "id"
+    const val PROPERTY_ID = "uid"
     const val PROPERTY_DESCRIPTION = "description"
     const val PROPERTY_FINALIZED= "finalized"
 

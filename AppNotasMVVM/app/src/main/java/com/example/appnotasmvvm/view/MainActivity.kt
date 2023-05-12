@@ -36,38 +36,39 @@ class MainActivity : AppCompatActivity(), com.example.appnotasmvvm.utils.OnClick
             adapter = anotacionAdapterF
         }
 
-        //Lenando la lista
-        mainViewModel.getAllTaskList()
-
-        //LLenando las listas de los adapters
-        mainViewModel.tasksLiveData.observe(this){
-               it.forEach{ task ->
-                   addTask(task)
-               }
-        }
-
-
         binding.btnAgregar.setOnClickListener {
            if (binding.tvDescripcionTarea.text.toString().isNotBlank()){
                val task = Task(
-                   (anotacionAdapter.itemCount + 1),
-                   binding.tvDescripcionTarea.text.toString()
+                   description = binding.tvDescripcionTarea.text.toString()
                )
-               mainViewModel.addTask(task)
                binding.tvDescripcionTarea.text?.clear()
                Snackbar.make(binding.root, R.string.strAddTask, Snackbar.LENGTH_SHORT).show()
+               mainViewModel.addTask(task)
            } else {
                binding.tvDescripcionTarea.error = getString(R.string.strValidacionError)
            }
         }
+
+        //LLenando las listas de los adapters
+        mainViewModel.tasksLiveData.observe(this){
+            addTask(it.toMutableList())
+        }
     }
 
-    private fun addTask(task: Task) {
-        if (task.finalized){
-            anotacionAdapterF.add(task)
-        }else{
-            anotacionAdapter.add(task)
+    private fun addTask(task: MutableList<Task>) {
+        val cacheTask: MutableList<Task> = mutableListOf()
+        val cacheTaskFinalized : MutableList<Task> = mutableListOf()
+
+        task.forEach{
+            if (it.finalized){
+                cacheTaskFinalized.add(it)
+            }else{
+                cacheTask.add(it)
+            }
         }
+
+        anotacionAdapter.updateTasks(cacheTask)
+        anotacionAdapterF.updateTasks(cacheTaskFinalized)
     }
     override fun onChecked(task: Task) {
         TODO("implementar suceso de cambiar de recycleview al darle check a la task")
@@ -75,6 +76,5 @@ class MainActivity : AppCompatActivity(), com.example.appnotasmvvm.utils.OnClick
 
     override fun onClick(task: Task, adapters: AdapterTask) {
         TODO("implementar suceso de eliminar al darle click a la task")
-
     }
 }

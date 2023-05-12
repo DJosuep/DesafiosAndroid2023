@@ -7,7 +7,8 @@ import com.example.appnotasmvvm.utils.Constants
 
 @Entity(tableName = Constants.ENTITY_TASK)
 data class TaskEntity(
-    @PrimaryKey(autoGenerate = true) val uid : Int,
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = Constants.PROPERTY_ID ) val uid : Int = 0,
     @ColumnInfo(name = Constants.PROPERTY_DESCRIPTION) val description : String,
     @ColumnInfo(name = Constants.PROPERTY_FINALIZED) val finalized : Boolean
     )
