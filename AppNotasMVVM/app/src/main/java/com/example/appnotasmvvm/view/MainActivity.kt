@@ -1,9 +1,11 @@
 package com.example.appnotasmvvm.view
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.coroutineScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.appnotasmvvm.R
 import com.example.appnotasmvvm.databinding.ActivityMainBinding
@@ -11,6 +13,7 @@ import com.example.appnotasmvvm.domain.tasks.model.Task
 import com.example.appnotasmvvm.view.adapter.AdapterTask
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity(), com.example.appnotasmvvm.utils.OnClickListener {
@@ -37,39 +40,30 @@ class MainActivity : AppCompatActivity(), com.example.appnotasmvvm.utils.OnClick
             adapter = anotacionAdapterF
         }
 
+        lifecycle.coroutineScope.launch {
+            mainViewModel.getTasksCompleted(false).collect {
+                anotacionAdapter.submitList(it)
+            }
+        }
+
+        lifecycle.coroutineScope.launch {
+            mainViewModel.getTasksCompleted(true).collect {
+                anotacionAdapterF.submitList(it)
+            }
+        }
+
         binding.btnAgregar.setOnClickListener {
            if (binding.tvDescripcionTarea.text.toString().isNotBlank()){
                val task = Task(
                    description = binding.tvDescripcionTarea.text.toString()
                )
                binding.tvDescripcionTarea.text?.clear()
-               Snackbar.make(binding.root, R.string.strAddTask, Snackbar.LENGTH_SHORT).show()
                mainViewModel.addTask(task)
+               Snackbar.make(binding.root, R.string.strAddTask, Snackbar.LENGTH_SHORT).show()
            } else {
                binding.tvDescripcionTarea.error = getString(R.string.strValidacionError)
            }
         }
-
-        //LLenando las listas de los adapters
-        mainViewModel.tasksLiveData.observe(this){
-            addTask(it.toMutableList())
-        }
-    }
-
-    private fun addTask(task: MutableList<Task>) {
-        val cacheTask: MutableList<Task> = mutableListOf()
-        val cacheTaskFinalized : MutableList<Task> = mutableListOf()
-
-        task.forEach{
-            if (it.finalized){
-                cacheTaskFinalized.add(it)
-            }else{
-                cacheTask.add(it)
-            }
-        }
-
-        anotacionAdapter.updateTasks(cacheTask)
-        anotacionAdapterF.updateTasks(cacheTaskFinalized)
     }
     override fun onChecked(task: Task) {
         mainViewModel.updateTask(task)

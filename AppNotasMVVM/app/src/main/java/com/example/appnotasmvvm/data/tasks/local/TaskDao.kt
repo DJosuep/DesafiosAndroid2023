@@ -7,11 +7,15 @@ import androidx.room.Query
 import androidx.room.Update
 import com.example.appnotasmvvm.data.tasks.model.TaskEntity
 import com.example.appnotasmvvm.utils.Constants
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface TaskDao {
     @Query("SELECT * FROM ${Constants.ENTITY_TASK}")
     suspend fun getAll(): List<TaskEntity>
+
+    @Query("SELECT * FROM ${Constants.ENTITY_TASK} WHERE ${Constants.PROPERTY_FINALIZED} = :finalized")
+    fun getAllCompleted(finalized : Boolean): Flow<List<TaskEntity>>
 
     @Insert
     suspend fun insert(taskEntity: TaskEntity)
