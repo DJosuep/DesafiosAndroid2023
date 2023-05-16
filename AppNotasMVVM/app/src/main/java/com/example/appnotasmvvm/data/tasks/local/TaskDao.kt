@@ -11,9 +11,6 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface TaskDao {
-    @Query("SELECT * FROM ${Constants.ENTITY_TASK}")
-    suspend fun getAll(): List<TaskEntity>
-
     @Query("SELECT * FROM ${Constants.ENTITY_TASK} WHERE ${Constants.PROPERTY_FINALIZED} = :finalized")
     fun getAllCompleted(finalized : Boolean): Flow<List<TaskEntity>>
 

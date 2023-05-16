@@ -8,10 +8,6 @@ import javax.inject.Inject
 class TasksRepository @Inject constructor(
     private val taskDao : TaskDao
 ) {
-    suspend fun getAllTasks(): List<TaskEntity>{
-        return taskDao.getAll()
-    }
-
     fun getAllTaskCompled(finalized : Boolean): Flow<List<TaskEntity>>{
         return taskDao.getAllCompleted(finalized)
     }
