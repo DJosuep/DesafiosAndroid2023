@@ -1,48 +1,42 @@
 package com.example.artelista.adapter
 
-import android.app.Activity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.artelista.R
 import com.example.artelista.model.Notification
 
-class AdapterNotifications(
-    notifications: ArrayList<Notification>,
-    resource:Int, activity: Activity): RecyclerView.Adapter<AdapterNotifications.NotificationViewHolder>() {
-    //------------
-    private val notifications: ArrayList<Notification>
-    private val resource: Int
-    private val activity: Activity
-    //------------
-    init {
-        this.notifications = notifications
-        this.resource = resource
-        this.activity = activity
-    }
+class AdapterNotifications(private val NotificationListener: NotificationListener): RecyclerView.Adapter<AdapterNotifications.NotificationViewHolder>() {
+
+    var listNotifications = ArrayList<Notification>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NotificationViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(resource, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_notifications, parent, false)
         return NotificationViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: NotificationViewHolder, position: Int) {
-        val notification : Notification = notifications[position]
-        holder.tvTituloNotification.text = notification.getTituloNotification()
-        holder.tvCategoriaNotification.text = notification.getCategoriaNotification()
-        holder.tvHoraNotification.text = notification.getHoraNotification()
+        val notification: Notification = listNotifications[position]
+        holder.tvTituloNotification.text = notification.tituloNotification
+        holder.tvCategoriaNotification.text = notification.categoriaNotification
+        holder.tvHoraNotification.text = notification.horaNotification
         holder.itemView.setOnClickListener {
-            Navigation.findNavController(holder.itemView).navigate(
-                R.id.ubicacionFragment)
+            NotificationListener.onNotificationClicked(notification, position)
         }
     }
     //-----------
     override fun getItemCount(): Int {
-        return notifications.size
+        return listNotifications.size
     }
+
+    fun updateData(data:List<Notification>?){
+        listNotifications.clear()
+        listNotifications.addAll(data!!)
+        notifyDataSetChanged()
+    }
+
     //Adapter versus la interface de cada item
     inner class NotificationViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         //---------------

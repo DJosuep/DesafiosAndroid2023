@@ -65,7 +65,7 @@ class CarritoFragment : Fragment() , CarritoListener{
         }
         viewModelCarrito.isLoading.observe(viewLifecycleOwner){
             if(it!=null){
-                binding.progressCarrito.visibility =    View.INVISIBLE
+                binding.progressCarrito.visibility = View.INVISIBLE
             }
         }
     }

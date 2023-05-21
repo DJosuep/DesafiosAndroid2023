@@ -29,6 +29,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
     </androidx.recyclerview.widget.RecyclerView>
+
     <RelativeLayout
         android:id="@+id/progressCarrito"
         android:layout_width="match_parent"
