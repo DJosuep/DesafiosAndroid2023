@@ -30,6 +30,14 @@
     <string name="strInicioPresentacion1">Delivery in 24 hours</string>
     <string name="strInicioPresentacion2">Buy today and receibe tomorrow</string>
     <string name="strActivityMenu">MenuActivity</string>
+    <string name="strEmailRequired">Email is a required value</string>
+    <string name="strPassRequired">Password is a required value</string>
+    <string name="strPassConfirmRequired">You must enter the password confirmation</string>
+    <string name="strPassEquals">Both passwords must match</string>
+    <string name="strErrorInValidate">Error validating</string>
+    <string name="strRegistred">User has been created</string>
+    <string name="strNotRegistered">User has not been created</string>
+    <string name="strInexistentUser">User does not exist</string>
     <string name="strInicio">Home</string>
     <string name="strCarrito">Shop cart</string>
     <string name="strNotificaciones">Notifications</string>

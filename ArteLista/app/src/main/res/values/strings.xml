@@ -24,13 +24,16 @@
     <string name="hintUserPass">Ingrese su contraseña</string>
     <string name="hintUserPassConfirm">Confirme su contraseña</string>
     <string name="strCrearCuenta">Crear cuenta</string>
-    <string name="strEmailRequired">Email es un valor requerido</string>
-    <string name="strPassRequired"></string>
+    <string name="strEmailRequired">El email es un valor requerido</string>
+    <string name="strPassRequired">La contraseña es un valor requerido</string>
     <string name="strPassConfirmRequired">Debe ingresar la confirmación de contraseña</string>
     <string name="strPassEquals">Ambas contraseñas deben coincidir</string>
     <string name="strErrorInValidate">Error al validar</string>
     <string name="strRegistred">El usuario ha sido creado</string>
-    <string name="strNotRegistred">El usuario no ha sido creado</string>
+    <string name="strNotRegistered">El usuario no ha sido creado</string>
+
+    <!-- Iniciar sesión strings -->
+    <string name="strInexistentUser">El usuario no existe</string>
 
     <!-- Barra de navegación strings -->
     <string name="strInicio">Inicio</string>
@@ -67,7 +70,7 @@
     <string name="strdefault_AM" translatable="false">A.M.</string>
     <string name="transition_galeriadet" translatable="false">No se</string>
 
-    <!-- Pantalla ubucation determinada -->
+    <!-- Pantalla ubicacion determinada -->
     <string name="strUbicacionEvento">San juan</string>
     <string name="strDireccionEvento">Del hotel los malandros</string>
     <string name="strSitioWebEvento">www.uni.edu.ni</string>

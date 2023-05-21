@@ -27,40 +27,39 @@ class ActivityCrearCuenta : AppCompatActivity() {
 
     private fun valida(): Boolean {
         try {
-            var validaok = false
-
             //-- El email es un valor requerido
             if (binding.editEmail.text?.length?.equals(0)!!) {
                 binding.editEmail.requestFocus()
                 binding.editEmail.error = getString(R.string.strEmailRequired)
-                return validaok
+                return false
             }
 
             //-- La contraseña es un valor requerido
             if (binding.editPassword.text?.length?.equals(0)!!) {
                 binding.editPassword.requestFocus()
                 binding.editPassword.error = getString(R.string.strPassRequired)
-                return validaok
+                return false
             }
 
             //La confirmación de contraseña es un valor requerido
             if (binding.editPasswordConfirm.text?.length?.equals(0)!!) {
                 binding.editPasswordConfirm.requestFocus()
                 binding.editPasswordConfirm.error = getString(R.string.strPassConfirmRequired)
-                return validaok
+                return false
             }
 
             //La contraseña debe ser igual a la confirmación de la contraseña
-            val strpassword: String = if (binding.editPassword.text != null) binding.editPassword.text.toString() else ""
-            val strpasswordconfirmar:String = if (binding.editPasswordConfirm.text != null) binding.editPasswordConfirm.text.toString() else ""
-            if (strpassword != strpasswordconfirmar)
+            val strPassword: String = if (binding.editPassword.text != null) binding.editPassword.text.toString() else ""
+            val strPassConfirm:String = if (binding.editPasswordConfirm.text != null) binding.editPasswordConfirm.text.toString() else ""
+            if (strPassword != strPassConfirm)
             {
                 binding.editPassword.requestFocus()
                 binding.editPassword.error = getString(R.string.strPassEquals)
-                return validaok
+                return false
             }
-            validaok = true
-            return validaok
+
+            return true
+
         } catch (e: Exception) {
             e.message?.let { Log.e(getString(R.string.strErrorInValidate), it) }
             return false
@@ -79,7 +78,7 @@ class ActivityCrearCuenta : AppCompatActivity() {
                         Toast.LENGTH_SHORT).show()
                     finish()
                 } else {
-                    Toast.makeText(this, getString(R.string.strNotRegistred),
+                    Toast.makeText(this, getString(R.string.strNotRegistered),
                         Toast.LENGTH_SHORT).show()
                 }
             }
