@@ -59,4 +59,7 @@
     <string name="strDescripcionUsuario">User, user, user, user, user, user, user.</string>
     <string name="strCuentaTwitter">\@usuario</string>
     <string name="strGaleria">Galería</string>
+    <string name="strUserTooLong">Username must not exceed 15 characters</string>
+    <string name="strPassTooLongShort">Password must contain between 3 and 8 characters</string>
+    <string name="strPassTooWeak">Password is too weak</string>
 </resources>

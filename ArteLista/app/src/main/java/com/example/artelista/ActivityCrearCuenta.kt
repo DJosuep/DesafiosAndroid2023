@@ -6,9 +6,19 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.artelista.databinding.ActivityCrearcuentaBinding
 import com.google.firebase.auth.FirebaseAuth
+import java.util.regex.Pattern
 
 class ActivityCrearCuenta : AppCompatActivity() {
    private  lateinit var binding: ActivityCrearcuentaBinding
+
+    private val PASSWORD_PATTERN: Pattern = Pattern.compile(
+        "^" +
+                "(?=.*[@#$%^&+=*])" +  // Al menos 1 caracter es especial
+                "(?=\\S+$)" +  // No espacios en blanco
+                ".{3,}" +  // Al menos 3 caracteres
+                "$"
+    )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCrearcuentaBinding.inflate(layoutInflater)
@@ -27,6 +37,13 @@ class ActivityCrearCuenta : AppCompatActivity() {
 
     private fun valida(): Boolean {
         try {
+            //-- Usuario muy largo
+            if (binding.editName.text?.length!! > 15) {
+                binding.editName.requestFocus()
+                binding.editName.error = getString(R.string.strUserTooLong)
+                return false
+            }
+
             //-- El email es un valor requerido
             if (binding.editEmail.text?.length?.equals(0)!!) {
                 binding.editEmail.requestFocus()
@@ -38,6 +55,19 @@ class ActivityCrearCuenta : AppCompatActivity() {
             if (binding.editPassword.text?.length?.equals(0)!!) {
                 binding.editPassword.requestFocus()
                 binding.editPassword.error = getString(R.string.strPassRequired)
+                return false
+            }
+
+            //-- La contraseña es menor que 3 o mayor que 8
+            if (binding.editPassword.text?.length!! < 3 || binding.editPassword.text?.length!! > 8) {
+                binding.editPassword.requestFocus()
+                binding.editPassword.error = getString(R.string.strPassTooLongShort)
+                return false
+            }
+
+            if (!PASSWORD_PATTERN.matcher(binding.editPassword.text).matches()){
+                binding.editPassword.requestFocus()
+                binding.editPassword.error = getString(R.string.strPassTooWeak)
                 return false
             }
 

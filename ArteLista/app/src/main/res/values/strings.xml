@@ -31,6 +31,9 @@
     <string name="strErrorInValidate">Error al validar</string>
     <string name="strRegistred">El usuario ha sido creado</string>
     <string name="strNotRegistered">El usuario no ha sido creado</string>
+    <string name="strUserTooLong">El nombre no debe superar los 15 caracteres</string>
+    <string name="strPassTooLongShort">La contraseña debe contener entre 3 y 8 caracteres</string>
+    <string name="strPassTooWeak">La contraseña es muy débil</string>
 
     <!-- Iniciar sesión strings -->
     <string name="strInexistentUser">El usuario no existe</string>

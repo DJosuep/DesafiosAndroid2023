@@ -76,6 +76,11 @@ class LoginActivity : AppCompatActivity() {
 
                 return false
             }
+            if (binding.editPassword.text?.length!! < 3 || binding.editPassword.text?.length!! > 8) {
+                binding.editPassword.requestFocus()
+                binding.editPassword.error = getString(R.string.strPassTooLongShort)
+                return false
+            }
 
             return true
 
