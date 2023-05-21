@@ -42,12 +42,13 @@ class CarritoFragment : Fragment() {
 
         val recyclerCarrito: RecyclerView = fbinding!!.rvCompras
         recyclerCarrito.layoutManager = LinearLayoutManager(context)
-        val adapterCarrito = AdapterCarrito(getCarrito(), R.layout.item_carrito, Activity())
-        recyclerCarrito.adapter = adapterCarrito
+        /*val adapterCarrito = AdapterCarrito(getCarrito(), R.layout.item_carrito, Activity())
+        recyclerCarrito.adapter = adapterCarrito*/
 
         return view
     }
 
+    /*
     private fun getCarrito(): ArrayList<Carrito> {
         //--------------
         val carrito: ArrayList<Carrito> = ArrayList()
@@ -58,7 +59,7 @@ class CarritoFragment : Fragment() {
         carrito.add(Carrito("Maribel Flores", "1,600", "https://artelista.s3.amazonaws.com/obras/fichas/7/4/0/1208970.jpg", "Blossom"))
         carrito.add(Carrito("Nana Tchelidze", "575", "https://artelista.s3.amazonaws.com/obras/big/2/3/8/1245944.jpg", "El Puente"))
         return carrito
-    }
+    }*/
 
     override fun onDestroyView() {
         super.onDestroyView()

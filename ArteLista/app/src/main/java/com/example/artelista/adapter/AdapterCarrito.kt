@@ -30,10 +30,10 @@ class AdapterCarrito(Carritos: ArrayList<Carrito>, resource:Int, activity:Activi
 
     override fun onBindViewHolder(holder: CarritoViewHolder, position: Int) {
         val carrito:Carrito = carritos[position]
-        holder.tvVendedorArticulo.text = carrito.getVendedorCarrito()
+        /*holder.tvVendedorArticulo.text = carrito.getVendedorCarrito()
         holder.tvPrecioArticulo.text = carrito.getPrecioCarrito()
         holder.tvTituloArticulo.text = carrito.getTituloCarrito()
-        Picasso.get().load(carrito.getImagenCarrito()).into(holder.imgCompras)
+        Picasso.get().load(carrito.getImagenCarrito()).into(holder.imgCompras)*/
         holder.itemView.setOnClickListener{
             Navigation.findNavController(holder.itemView).navigate(
                 R.id.carritoDetalleFragment
