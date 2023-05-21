@@ -1,4 +1,4 @@
-package com.example.artelista
+package com.example.artelista.ui
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -7,12 +7,9 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
+import com.example.artelista.R
 import com.example.artelista.databinding.ActivityMenuBinding
-import com.example.artelista.model.Carrito
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.firebase.firestore.FirebaseFirestore
-import org.json.JSONArray
-import org.json.JSONObject
 import java.util.*
 
 class MenuActivity : AppCompatActivity() {

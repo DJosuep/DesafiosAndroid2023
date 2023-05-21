@@ -1,51 +1,48 @@
 package com.example.artelista.adapter
 
-import android.app.Activity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.artelista.R
 import com.example.artelista.model.Carrito
 import com.squareup.picasso.Picasso
 
-class AdapterCarrito(Carritos: ArrayList<Carrito>, resource:Int, activity:Activity): RecyclerView.Adapter<AdapterCarrito.CarritoViewHolder>() {
-    private val carritos:ArrayList<Carrito>
-    private val resource:Int
-    private val activity:Activity
+class AdapterCarrito(private val CarritoListener: CarritoListener): RecyclerView.Adapter<AdapterCarrito.CarritoViewHolder>() {
 
-    init {
-        this.carritos = Carritos
-        this.resource = resource
-        this.activity = activity
-    }
+    var listCarrito = ArrayList<Carrito>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CarritoViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(resource, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_carrito, parent, false)
         return CarritoViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: CarritoViewHolder, position: Int) {
-        val carrito:Carrito = carritos[position]
-        /*holder.tvVendedorArticulo.text = carrito.getVendedorCarrito()
-        holder.tvPrecioArticulo.text = carrito.getPrecioCarrito()
-        holder.tvTituloArticulo.text = carrito.getTituloCarrito()
-        Picasso.get().load(carrito.getImagenCarrito()).into(holder.imgCompras)*/
+    override fun onBindViewHolder(holder: CarritoViewHolder, position:Int){
+        val carrito:Carrito = listCarrito[position]
+        holder.tvVendedorArticulo.text = carrito.artistaCarrito
+        holder.tvPrecioArticulo.text = carrito.precioCarrito
+        holder.tvTituloArticulo.text = carrito.tituloCarrito
+        Picasso.get().load(carrito.imagenCarrito).into(holder.imgCompras)
         holder.itemView.setOnClickListener{
-            Navigation.findNavController(holder.itemView).navigate(
-                R.id.carritoDetalleFragment
-            )
+            CarritoListener.onCarritoClicked(carrito, position)
         }
     }
 
     override fun getItemCount(): Int {
-        return carritos.size
+        return listCarrito.size
     }
 
+    fun updateData(data:List<Carrito>?){
+        listCarrito.clear()
+        listCarrito.addAll(data!!)
+        notifyDataSetChanged()
+    }
+
+
     inner class CarritoViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+
         val tvVendedorArticulo: TextView
         val tvPrecioArticulo: TextView
         val tvTituloArticulo: TextView
