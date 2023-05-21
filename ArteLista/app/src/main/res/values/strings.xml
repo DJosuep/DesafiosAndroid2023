@@ -24,6 +24,13 @@
     <string name="hintUserPass">Ingrese su contraseña</string>
     <string name="hintUserPassConfirm">Confirme su contraseña</string>
     <string name="strCrearCuenta">Crear cuenta</string>
+    <string name="strEmailRequired">Email es un valor requerido</string>
+    <string name="strPassRequired"></string>
+    <string name="strPassConfirmRequired">Debe ingresar la confirmación de contraseña</string>
+    <string name="strPassEquals">Ambas contraseñas deben coincidir</string>
+    <string name="strErrorInValidate">Error al validar</string>
+    <string name="strRegistred">El usuario ha sido creado</string>
+    <string name="strNotRegistred">El usuario no ha sido creado</string>
 
     <!-- Barra de navegación strings -->
     <string name="strInicio">Inicio</string>

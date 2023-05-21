@@ -48,6 +48,7 @@
     <string name="strCategoriaVendedor">Furniture sellerman</string>
     <string name="strUsuarios">Users</string>
     <string name="strAcercaUsuario">More about.</string>
+    <string name="strDescripcionUsuario">User, user, user, user, user, user, user.</string>
     <string name="strCuentaTwitter">\@usuario</string>
     <string name="strGaleria">Galería</string>
 </resources>
