@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".ActivityCrearCuenta">
+    tools:context=".ui.ActivityCrearCuenta">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -36,7 +36,7 @@
         android:drawablePadding="@dimen/margen5"
         android:hint="@string/hintUsername"
         android:textColorHint="@color/black"
-        android:inputType="textPassword"
+        android:inputType="textPersonName"
         android:paddingLeft="@dimen/margen4"
         android:textColor="@color/black"
         app:layout_constraintHorizontal_bias="1.0"
@@ -54,7 +54,7 @@
         android:drawableLeft="@drawable/ic_mail"
         android:drawablePadding="@dimen/margen5"
         android:hint="@string/hintUserEmail"
-        android:inputType="textPassword"
+        android:inputType="textEmailAddress"
         android:paddingLeft="@dimen/margen4"
         android:layout_marginTop="@dimen/margen3"
         android:textColor="@color/black"

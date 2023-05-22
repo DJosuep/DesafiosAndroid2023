@@ -1,47 +1,42 @@
 package com.example.artelista.adapter
 
-import android.app.Activity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.artelista.R
 import com.example.artelista.model.User
 
-class AdapterUser(users: ArrayList<User>,
-                        resource:Int, activity: Activity): RecyclerView.Adapter<AdapterUser.UserViewHolder>() {
-    //------------
-    private val users: ArrayList<User>
-    private val resource: Int
-    private val activity: Activity
-    //------------
-    init {
-        this.users = users
-        this.resource = resource
-        this.activity = activity
-    }
+class AdapterUser(private val UserListener: UserListener): RecyclerView.Adapter<AdapterUser.UserViewHolder>() {
+
+    private var listUser = ArrayList<User>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(resource, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_usuario, parent, false)
         return UserViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
-        val user : User = users[position]
-        holder.tvNombreUsuario.text = user.getNombreUsuario()
-        holder.tvCategoriaUsuario.text = user.getCategoriaUsuario()
-        holder.tvPaisUsuario.text = user.getPaisUsuario()
+        val user: User = listUser[position]
+        holder.tvNombreUsuario.text = user.nombreUsuario
+        holder.tvCategoriaUsuario.text = user.categoriaUsuario
+        holder.tvPaisUsuario.text = user.paisUsuario
         holder.itemView.setOnClickListener {
-            Navigation.findNavController(holder.itemView).navigate(
-                R.id.userDetalleFragment)
+            UserListener.onUserClicked(user, position)
         }
     }
     //-----------
     override fun getItemCount(): Int {
-        return users.size
+        return listUser.size
     }
+
+    fun updateData(data:List<User>?){
+        listUser.clear()
+        listUser.addAll(data!!)
+        notifyDataSetChanged()
+    }
+
     //Adapter versus la interface de cada item
     inner class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         //---------------

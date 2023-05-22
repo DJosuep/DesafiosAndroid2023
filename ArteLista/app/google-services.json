@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "706333079367",
+    "project_id": "artelista-b0685",
+    "storage_bucket": "artelista-b0685.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:706333079367:android:f8946b02f8d416e43c3e62",
+        "android_client_info": {
+          "package_name": "com.example.artelista"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "706333079367-gvqo66kh0rh149ho4rf1nmifafilbo62.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.artelista",
+            "certificate_hash": "1c98f83eb7c35d9f6c30de3d07beec751b0c58df"
+          }
+        },
+        {
+          "client_id": "706333079367-m38mgff3hcodciddm0o1qiipquaunonb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbny-8oSEpCAL4-nhrkTVuMZDNiQszx88"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "706333079367-m38mgff3hcodciddm0o1qiipquaunonb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

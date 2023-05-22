@@ -1,6 +1,5 @@
 package com.example.artelista.ui.carrito
 
-import android.app.Activity
 import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,22 +7,25 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.artelista.R
 import com.example.artelista.adapter.AdapterCarrito
+import com.example.artelista.adapter.CarritoListener
 import com.example.artelista.databinding.FragmentCarritoBinding
 import com.example.artelista.model.Carrito
+import com.example.artelista.viewmodel.CarritoViewModel
 
-class CarritoFragment : Fragment() {
+class CarritoFragment : Fragment() , CarritoListener{
 
     private var fbinding: FragmentCarritoBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = fbinding!!
+
+    private lateinit var carritoAdapter: AdapterCarrito
+    private lateinit var viewModelCarrito: CarritoViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -40,24 +42,32 @@ class CarritoFragment : Fragment() {
         toolbar.setTitle(R.string.strCarrito)
         toolbar.setTitleTextColor(Color.WHITE)
 
-        val recyclerCarrito: RecyclerView = fbinding!!.rvCompras
-        recyclerCarrito.layoutManager = LinearLayoutManager(context)
-        val adapterCarrito = AdapterCarrito(getCarrito(), R.layout.item_carrito, Activity())
-        recyclerCarrito.adapter = adapterCarrito
+        viewModelCarrito = ViewModelProvider(this)[CarritoViewModel::class.java]
+        viewModelCarrito.getCarritoVM()
+        carritoAdapter = AdapterCarrito(this)
+        binding.rvCompras.apply {
+            layoutManager = LinearLayoutManager(view.context, LinearLayoutManager.VERTICAL, false)
+            adapter = carritoAdapter
+        }
+        observerViewModel()
 
         return view
     }
 
-    private fun getCarrito(): ArrayList<Carrito> {
-        //--------------
-        val carrito: ArrayList<Carrito> = ArrayList()
-        //-------------
-        carrito.add(Carrito("Henciel Daniel Bulimar", "1,600", "https://artelista.s3.amazonaws.com/obras/big/3/5/5/1209702-607458d7c0c2a.jpg", "Memories"))
-        carrito.add(Carrito("Jesús Cuenca", "1,200", "https://artelista.s3.amazonaws.com/obras/big/1/6/4/1209582.jpg", "Memories"))
-        carrito.add(Carrito("Pol Ledent", "1,600", "https://artelista.s3.amazonaws.com/obras/fichas/1/4/6/1209343.jpg", "Como en invierno"))
-        carrito.add(Carrito("Maribel Flores", "1,600", "https://artelista.s3.amazonaws.com/obras/fichas/7/4/0/1208970.jpg", "Blossom"))
-        carrito.add(Carrito("Nana Tchelidze", "575", "https://artelista.s3.amazonaws.com/obras/big/2/3/8/1245944.jpg", "El Puente"))
-        return carrito
+    override fun onCarritoClicked(Carrito: Carrito, position: Int) {
+        val bundle = bundleOf("carrito" to Carrito)
+        NavHostFragment.findNavController(this).navigate(R.id.carritoDetalleFragment, bundle)
+    }
+
+    private fun observerViewModel(){
+        viewModelCarrito.listCarrito.observe(viewLifecycleOwner) { carrito ->
+            carritoAdapter.updateData(carrito)
+        }
+        viewModelCarrito.isLoading.observe(viewLifecycleOwner){
+            if(it!=null){
+                binding.progressCarrito.visibility = View.INVISIBLE
+            }
+        }
     }
 
     override fun onDestroyView() {

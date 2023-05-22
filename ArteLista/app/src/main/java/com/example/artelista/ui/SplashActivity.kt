@@ -1,4 +1,4 @@
-package com.example.artelista
+package com.example.artelista.ui
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
+import com.example.artelista.R
 import com.example.artelista.databinding.ActivitySplashBinding
 
 @SuppressLint("CustomSplashScreen")

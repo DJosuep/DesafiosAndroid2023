@@ -1,9 +1,9 @@
 package com.example.artelista.model
 
-class User(private var nombreUsuario:String,
-           private var categoriaUsuario:String,
-           private var paisUsuario:String) {
-    fun getNombreUsuario():String{return this.nombreUsuario}
-    fun getCategoriaUsuario():String{return this.categoriaUsuario}
-    fun getPaisUsuario():String{return this.paisUsuario}
+import java.io.Serializable
+
+class User: Serializable {
+    var nombreUsuario:String = ""
+    var categoriaUsuario:String = ""
+    var paisUsuario:String = ""
 }
