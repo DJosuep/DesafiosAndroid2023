@@ -9,6 +9,7 @@ import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.example.artelista.R
 import com.example.artelista.databinding.ActivityMenuBinding
+import com.example.artelista.model.User
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.firestore.FirebaseFirestore
 import org.json.JSONArray
@@ -38,56 +39,52 @@ class MenuActivity : AppCompatActivity() {
         setContentView(view)
         configurarNavegacion(navHostFragment)
 
-        /*
-
         //--- Carga de datos
-        val jsonNotification = JSONArray("[\n" +
+        val jsonUser = JSONArray("[\n" +
                 "            {\n" +
-                "                'tituloNotificacion' : 'Subasta de pañuelos usados',\n" +
-                "                'categoriaNotificacion' : 'Subasta',\n" +
-                "                'horaNotificacion' : '10:15'\n" +
+                "                'nombreUsuario' : 'Armando José Aguirre',\n" +
+                "                'categoriaUsuario' : 'Muebles',\n" +
+                "                'paisUsuario' : 'Guatemala'\n" +
                 "            },\n" +
                 "            {\n" +
-                "                'tituloNotificacion' : 'Subasta de pañuelos usados',\n" +
-                "                'categoriaNotificacion' : 'Subasta',\n" +
-                "                'horaNotificacion' : '10:15'\n" +
+                "                'nombreUsuario' : 'German Traña Obando',\n" +
+                "                'categoriaUsuario' : 'Tecnología',\n" +
+                "                'paisUsuario' : 'Costa Rica'\n" +
                 "            },\n" +
                 "            {\n" +
-                "                'tituloNotificacion' : 'Subasta de pañuelos usados',\n" +
-                "                'categoriaNotificacion' : 'Subasta',\n" +
-                "                'horaNotificacion' : '10:15'\n" +
+                "                'nombreUsuario' : 'Pol Ledent',\n" +
+                "                'categoriaUsuario' : 'Tecnología',\n" +
+                "                'paisUsuario' : 'Guatemala'\n" +
                 "            },\n" +
                 "            {\n" +
-                "                'tituloNotificacion' : 'Subasta de pañuelos usados',\n" +
-                "                'categoriaNotificacion' : 'Subasta',\n" +
-                "                'horaNotificacion' : '10:15'\n" +
+                "                'nombreUsuario' : 'Maribel Flores',\n" +
+                "                'categoriaUsuario' : 'Muebles',\n" +
+                "                'paisUsuario' : 'Honduras'\n" +
                 "            },\n" +
                 "            {\n" +
-                "                'tituloNotificacion' : 'Subasta de pañuelos usados',\n" +
-                "                'categoriaNotificacion' : 'Subasta',\n" +
-                "                'horaNotificacion' : '10:15'\n" +
+                "                'nombreUsuario' : 'Nana Tchelidze',\n" +
+                "                'categoriaUsuario' : 'Juguetes',\n" +
+                "                'paisUsuario' : 'Honduras'\n" +
                 "            },\n" +
                 "            {\n" +
-                "                'tituloNotificacion' : 'Subasta de pañuelos usados',\n" +
-                "                'categoriaNotificacion' : 'Subasta',\n" +
-                "                'horaNotificacion' : '10:15'\n" +
+                "                'nombreUsuario' : 'Armando José Aguirre',\n" +
+                "                'categoriaUsuario' : 'Juguetes',\n" +
+                "                'paisUsuario' : 'Costa Rica'\n" +
                 "            }\n" +
                 "        ]")
 
         val fireDB: FirebaseFirestore = FirebaseFirestore.getInstance()
 //-----------------------
-        for (i in 0 until jsonNotification.length())
+        for (i in 0 until jsonUser.length())
         {
-            val objNotification = jsonNotification.get(i) as JSONObject
-            val notification = com.example.artelista.model.Notification()
+            val objNotification = jsonUser.get(i) as JSONObject
+            val user = User()
 
-            notification.tituloNotification = objNotification.getString("tituloNotificacion")
-            notification.categoriaNotification = objNotification.getString("categoriaNotificacion")
-            notification.horaNotification = objNotification.getString("horaNotificacion")
-            fireDB.collection("Notification").document().set(notification)
+            user.nombreUsuario = objNotification.getString("nombreUsuario")
+            user.categoriaUsuario = objNotification.getString("categoriaUsuario")
+            user.paisUsuario = objNotification.getString("paisUsuario")
+            fireDB.collection("Usuario").document().set(user)
         }
-
-         */
     }
 
     private fun configurarNavegacion(navHostFragment:NavHostFragment){

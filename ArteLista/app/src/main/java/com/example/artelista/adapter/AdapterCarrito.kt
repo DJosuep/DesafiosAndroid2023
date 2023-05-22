@@ -12,7 +12,7 @@ import com.squareup.picasso.Picasso
 
 class AdapterCarrito(private val CarritoListener: CarritoListener): RecyclerView.Adapter<AdapterCarrito.CarritoViewHolder>() {
 
-    var listCarrito = ArrayList<Carrito>()
+    private var listCarrito = ArrayList<Carrito>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CarritoViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_carrito, parent, false)
@@ -20,7 +20,7 @@ class AdapterCarrito(private val CarritoListener: CarritoListener): RecyclerView
     }
 
     override fun onBindViewHolder(holder: CarritoViewHolder, position:Int){
-        val carrito:Carrito = listCarrito[position]
+        val carrito: Carrito = listCarrito[position]
         holder.tvVendedorArticulo.text = carrito.artistaCarrito
         holder.tvPrecioArticulo.text = carrito.precioCarrito
         holder.tvTituloArticulo.text = carrito.tituloCarrito

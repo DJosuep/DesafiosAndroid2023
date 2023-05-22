@@ -4,18 +4,18 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.artelista.data.ICallback
 import com.example.artelista.data.ServiceFirestore
-import com.example.artelista.model.Notification
+import com.example.artelista.model.User
 
-class NotificationsViewModel: ViewModel() {
+class UserViewModel: ViewModel() {
     //Inicialización
     private val fireStoreService = ServiceFirestore()
-    var listNotification: MutableLiveData<List<Notification>> = MutableLiveData()
+    var listUser: MutableLiveData<List<User>> = MutableLiveData()
     var isLoading = MutableLiveData<Boolean>()
 
-    fun getNotificationsVM(){
-        fireStoreService.getNotifications(object: ICallback<List<Notification>>{
-            override fun onSuccess(result: List<Notification>?){
-                listNotification.postValue(result!!)
+    fun getUserVM(){
+        fireStoreService.getUser(object: ICallback<List<User>>{
+            override fun onSuccess(result: List<User>?){
+                listUser.postValue(result!!)
                 cargaFinalizada()
             }
 
