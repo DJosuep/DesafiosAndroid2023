@@ -56,7 +56,7 @@ class NotificationsFragment : Fragment() , NotificationListener{
 
     override fun onNotificationClicked(Notification: Notification, position: Int) {
         val bundle = bundleOf("notification" to Notification)
-        NavHostFragment.findNavController(this).navigate(R.id.carritoDetalleFragment, bundle)
+        NavHostFragment.findNavController(this).navigate(R.id.ubicacionFragment, bundle)
     }
 
     private fun observerViewModel(){
