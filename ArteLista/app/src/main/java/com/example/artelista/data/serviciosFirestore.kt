@@ -9,7 +9,7 @@ import com.google.firebase.firestore.FirebaseFirestoreSettings
 //Nombre de las colecciones tal cual existen en Firebase
 const val CARRITO_COLLECTION_NAME="Carrito"
 const val NOTIFICATION_COLLECTION_NAME="Notification"
-const val USER_COLLECTION_NAME="User"
+const val USER_COLLECTION_NAME="Usuario"
 
 class ServiceFirestore  {
     //------------------
@@ -34,7 +34,7 @@ class ServiceFirestore  {
             }
     }
     fun getNotifications(callback: ICallback<List<Notification>>) {
-        CloudFirestore.collection(USER_COLLECTION_NAME)
+        CloudFirestore.collection(NOTIFICATION_COLLECTION_NAME)
             .orderBy("tituloNotification")
             .get()
             .addOnSuccessListener { result ->
@@ -46,7 +46,7 @@ class ServiceFirestore  {
             }
     }
     fun getUser(callback: ICallback<List<User>>) {
-        CloudFirestore.collection(NOTIFICATION_COLLECTION_NAME)
+        CloudFirestore.collection(USER_COLLECTION_NAME)
             .orderBy("nombreUsuario")
             .get()
             .addOnSuccessListener { result ->

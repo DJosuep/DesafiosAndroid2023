@@ -39,7 +39,7 @@ class MenuActivity : AppCompatActivity() {
         setContentView(view)
         configurarNavegacion(navHostFragment)
 
-        //--- Carga de datos
+        /*
         val jsonUser = JSONArray("[\n" +
                 "            {\n" +
                 "                'nombreUsuario' : 'Armando José Aguirre',\n" +
@@ -85,6 +85,7 @@ class MenuActivity : AppCompatActivity() {
             user.paisUsuario = objNotification.getString("paisUsuario")
             fireDB.collection("Usuario").document().set(user)
         }
+        */
     }
 
     private fun configurarNavegacion(navHostFragment:NavHostFragment){
